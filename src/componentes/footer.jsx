@@ -10,7 +10,7 @@ function Footer() {
     return (
         <>
                         <footer class="footer">
-                        <div>Todos los derechos reservados a monkeys store | SM33</div>
+                        <div>Todos los derechos reservados a monkeys games | SM-43</div>
                         </footer>
         </>
     );

@@ -107,19 +107,19 @@ function Sidebar() {
                     <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
                       <tr>
                         <th scope="col" class="px-6 py-3">
-                          Product name
+                          ID
                         </th>
                         <th scope="col" class="px-6 py-3">
-                          Color
+                          Nombre
                         </th>
                         <th scope="col" class="px-6 py-3">
-                          Category
+                          Apellidos
                         </th>
                         <th scope="col" class="px-6 py-3">
-                          Price
+                          Nombre de usuario
                         </th>
                         <th scope="col" class="px-6 py-3">
-                          Action
+                          Contraseña
                         </th>
                       </tr>
                     </thead>
@@ -139,6 +139,9 @@ function Sidebar() {
                           </td>
                           <td class="px-6 py-4">
                             {users.UserName}
+                          </td>
+                          <td class="px-6 py-4">
+                            {users.Password}
                           </td>
                           <td class="px-6 py-4">
                             <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
