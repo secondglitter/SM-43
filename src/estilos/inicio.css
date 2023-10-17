@@ -1,3 +1,20 @@
 .inicio-container{
     text-align: center;
 }
+.bienvenida {
+        padding: 20px;
+        color: #000000;
+        animation: shine 3s ease-in-out infinite;
+      }
+    
+      @keyframes shine {
+        0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        50% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 1.0);
+        }
+        100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+}
