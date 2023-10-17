@@ -7,6 +7,7 @@ import Login from './paginas/login';
 import Registro from './paginas/registro';
 import Texto from './paginas/conocenos';
 import Newuser from './paginas/newuser';
+import Updateuser from './paginas/updateuser';
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
 import Apex from './paginas/grupos/apex';
@@ -17,9 +18,6 @@ import Lol from './paginas/grupos/lol';
 import Minecraft from './paginas/grupos/minecraft';
 import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
-
-
-
 
 function App() {
   const router = createBrowserRouter([
@@ -50,6 +48,10 @@ function App() {
     {
       path: "/newuser",
       element: <Newuser/>
+    },
+    {
+      path: "/updateuser",
+      element: <Updateuser/>
     },
     {
       path: "/presentacion",

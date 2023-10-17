@@ -12,7 +12,7 @@ function Sidebar() {
 
   const HandeDelte = async (id) => {
 
-    const response = await axios.delete(`http://localhost:3000/users/${id}`);
+  const response = await axios.delete(`http://localhost:3000/users/${id}`);
    
    if(response.status == 200){
      alert("Se borro correctamente")
@@ -144,6 +144,9 @@ function Sidebar() {
                                                     Nombre de usuario
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
+                                                    Correo
+                                                </th>
+                                                <th scope="col" class="px-6 py-3">
                                                     Contraseña
                                                 </th>
                                             </tr>
@@ -166,7 +169,13 @@ function Sidebar() {
                                                         {users.UserName}
                                                     </td>
                                                     <td class="px-6 py-4">
+                                                        {users.Email}
+                                                    </td>
+                                                    <td class="px-6 py-4">
                                                         {users.Password}
+                                                    </td>
+                                                    <td class="px-6 py-4">
+                                                        <a href="/updateuser" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" >Editar</a>
                                                     </td>
                                                     <td class="px-6 py-4">
                                                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(users.id)}>Eliminar</a>
