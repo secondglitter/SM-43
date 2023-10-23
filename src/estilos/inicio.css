@@ -1,0 +1,9 @@
+.inicio-container{
+    text-align: center;
+}
+
+.background-1{
+  background: url('../imagenes/fondo\ chingon\ 2.jpg');
+  background-position: center;
+  background-size: cover;
+}
