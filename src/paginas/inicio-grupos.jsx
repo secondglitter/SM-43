@@ -17,7 +17,7 @@ function InicioGrupos() {
             </p>
           </div>
           <div>
-            <div className="mt-20">
+            <div className="mt-40">
               <div
                 aria-hidden="true"
                 className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"

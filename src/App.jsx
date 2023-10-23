@@ -6,6 +6,7 @@ import ERROR from './componentes/404';
 import Login from './paginas/login';
 import Registro from './paginas/registro';
 import Texto from './paginas/conocenos';
+import Users from './paginas/users';
 import Newuser from './paginas/newuser';
 import Updateuser from './paginas/updateuser';
 import InicioGrupos from './paginas/inicio-grupos';
@@ -19,7 +20,10 @@ import Minecraft from './paginas/grupos/minecraft';
 import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
 
+
+
 function App() {
+  
   const router = createBrowserRouter([
     {
       path: "/",
@@ -46,11 +50,15 @@ function App() {
       element: <Texto/>
     },
     {
+      path: "/users",
+      element: <Users/>
+    },
+    {
       path: "/newuser",
       element: <Newuser/>
     },
     {
-      path: "/updateuser",
+      path: "/updateuser/:id",
       element: <Updateuser/>
     },
     {
@@ -93,6 +101,8 @@ function App() {
       path: "/grupos/redead",
       element: <RedeadII/>
     },
+    
+    
   ])
   return(
     <>
@@ -100,5 +110,6 @@ function App() {
     </>
   )
 }
+
 
 export default App;

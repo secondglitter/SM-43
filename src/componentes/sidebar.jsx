@@ -82,7 +82,7 @@ function Sidebar() {
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <a href="/users" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                   <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                 </svg>
@@ -119,81 +119,7 @@ function Sidebar() {
         </div>
       </aside>
 
-      <div class="p-4 sm:ml-64">
-                <div class="p-4 sm:ml-50">
-                  
-                    <div class="p-20 border-dashed">
 
-                        <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div class="container">
-                                <div class="relative  left-70 top-24">
-                                <Link to="/newuser"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
-                                            <tr>
-                                                <th scope="col" class="px-6 py-3">
-                                                    ID
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Nombre
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Apellidos
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Nombre de usuario
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Correo
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Contraseña
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            {Users.map((users) => (
-
-                                                <tr class="border-b dark:border-gray-700">
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                        {users.id}
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        {users.Nombre}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.Apellido}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.UserName}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.Email}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.Password}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        <a href="/updateuser" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" >Editar</a>
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(users.id)}>Eliminar</a>
-                                                    </td>
-                                                </tr>
-                                            ))}
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
     </>
   );
 }
