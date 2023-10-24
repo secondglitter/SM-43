@@ -37,52 +37,61 @@ const Login = () => {
 
     return (
         <section className="uwu">
-            <div className="form-box">
-                <div className="form-value">
-                    <form className="hp">
-                        <h2 className="inicio">Iniciar Sesión</h2>
-                        <div className="inputbox">
-                            <ion-icon name="mail-outline" />
-                            <input type='email' placeholder="Correo Electronico" name="Correo_electronico"  required />
-                            <label htmlFor="username">Correo Electronico:</label>
-                        </div>
-                        <div className="inputbox">
-                            <ion-icon name="lock-closed-outline" />
-                            <input type='password' placeholder="Contraseña" name="Contrasenia" required />
-                            <label htmlFor="password">Contraseña:</label>
-                        </div>
-                        <button id="inicio1" type="submit">Ingresar</button>
-                <div>
+            <div>
                 <br />
                 {profile ? (
-                    <div>
-                        <h2>Iniciaste sesion con Google</h2>
-                        <img src={profile.picture} alt="user image" />
-                        <p>Nombre: {profile.name}</p>
-                        <p>Email: {profile.email}</p>
-                        <br />
-                        <button id="inicio1" onClick={logOut}>Cerrar Sesion</button>
+                    <div className="form-box">
+                        <div className="form-value">
+                            <form className="hp">
+                                <div>
+                                    <h2 className="inicio">Iniciaste sesion con Google</h2>
+                                    <img src={profile.picture} alt="user image" />
+                                    <p>Nombre: {profile.name}</p>
+                                    <p>Email: {profile.email}</p>
+                                    <br />
+                                    <button id="inicio1" onClick={logOut}>Cerrar Sesion</button>
+
+                                </div>
+                            </form>
+                        </div>
                     </div>
+
                 ) : (
-                    <button id="inicio1" onClick={() => login()}>Iniciar Sesion con Google </button>
-                    
+                    <div className="form-box">
+                        <div className="form-value">
+                            <form className="hp">
+                                <h2 className="inicio">Iniciar Sesión</h2>
+                                <div className="inputbox">
+                                    <ion-icon name="mail-outline" />
+                                    <input type='email' placeholder="Correo Electronico" name="Correo_electronico" required />
+                                    <label htmlFor="username">Correo Electronico:</label>
+                                </div>
+                                <div className="inputbox">
+                                    <ion-icon name="lock-closed-outline" />
+                                    <input type='password' placeholder="Contraseña" name="Contrasenia" required />
+                                    <label htmlFor="password">Contraseña:</label>
+                                </div>
+                                <button id="inicio1" type="submit">Ingresar</button>
+                                <br></br><br></br>
+                                <button id="inicio1" onClick={() => login()}>Iniciar Sesion con Google </button>
+                                <div className="register">
+
+                                    <p>
+                                        No tienes una cuenta? <Link to="/registro">Registrate</Link>
+                                    </p>
+                                    <br></br>
+                                    <p>
+                                        <Link to="/">- Regresar al Inicio -</Link>
+                                    </p>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 )}
             </div>
-                        <div className="register">
 
-                            <p>
-                                No tienes una cuenta? <Link to="/registro">Registrate</Link>
-                            </p>
-                            <br></br>
-                            <p>
-                                <Link to="/">- Regresar al Inicio -</Link>
-                            </p>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
         </section>
     );
 };
