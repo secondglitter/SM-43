@@ -68,6 +68,102 @@ const products = [
         imageAlt: "Red dead redemption II",
         
       },
+      {
+        id: 9,
+        name: 'Smite',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Smite.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 10,
+        name: 'Hollow Knigth',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 11,
+        name: 'Gears ',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 12,
+        name: 'Halo',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 13,
+        name: 'Street Fighter',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 14,
+        name: 'Super Smash Bros',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 15,
+        name: 'Souls',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 16,
+        name: 'Leaf for dead',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 17,
+        name: 'Valorant',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 18,
+        name: 'Titanfall 2',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 19,
+        name: 'La tierra media',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
+      {
+        id: 20,
+        name: 'Destiny',
+        href: '/grupos/redead',
+        imageSrc: '/imagenes/Redead.jpg',
+        imageAlt: "Red dead redemption II",
+        
+      },
     // More products...
   ]
   

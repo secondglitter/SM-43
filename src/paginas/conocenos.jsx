@@ -16,7 +16,7 @@ function Texto() {
             <br /><br />
             <h1 className="izquierda">Conócenos</h1>
             <br />
-            <img src= '/imagenes/conocenos.png' alt="Acceso principal" className="foto  shadow-pop-tl" />
+            <img src= '/imagenes/conocenos.png' alt="Acceso principal" className="foto" />
             <p>
               Somos una empresa apasionada por la innovación y los gadgets de vanguardia. En un mundo en constante evolución tecnológica, 
               nos enorgullece ofrecer una amplia gama de dispositivos electrónicos que se adaptan a las necesidades y estilos de vida de nuestros 
