@@ -12,7 +12,7 @@ function Inicio(){
        <Header></Header>
         <div className="inicio-container">
       <div className="bienvenida">
-        <h1>Bienvenidos a Monkeys Games</h1>
+        <h1>Bienvenidos a la Monkeys Store</h1>
       </div>
       <div className="contenido">
         <div className="seccion">

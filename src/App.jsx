@@ -9,6 +9,8 @@ import Texto from './paginas/conocenos';
 import Users from './paginas/users';
 import Newuser from './paginas/newuser';
 import Updateuser from './paginas/updateuser';
+import Group from './paginas/group';
+import Newgroup from './paginas/newgroup';
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
 import Apex from './paginas/grupos/apex';
@@ -19,7 +21,8 @@ import Lol from './paginas/grupos/lol';
 import Minecraft from './paginas/grupos/minecraft';
 import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
-import Frase from './paginas/frase-gigapro';
+import Updategroup from './paginas/updategroup';
+
 
 
 
@@ -63,6 +66,18 @@ function App() {
       element: <Updateuser/>
     },
     {
+      path: "/groups",
+      element: <Group/>
+    },
+    {
+      path: "/newgroup",
+      element: <Newgroup/>
+    },
+    {
+      path: "/updategroup/:id",
+      element: <Updategroup/>
+    },
+    {
       path: "/presentacion",
       element: <InicioGrupos/>
     },
@@ -101,10 +116,6 @@ function App() {
     {
       path: "/grupos/redead",
       element: <RedeadII/>
-    },
-    {
-      path: "/frase-gigapro",
-      element: <Frase/>
     },
     
     

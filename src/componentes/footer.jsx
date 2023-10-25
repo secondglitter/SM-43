@@ -2,7 +2,6 @@
 import React from 'react'
 // agregar los  enlaces
 import '../estilos/footer.css';
-import { Link } from 'react-router-dom';
 
 
 // 2- crear la funcion
@@ -11,7 +10,7 @@ function Footer() {
     return (
         <>
                         <footer class="footer">
-                        <div>Todos los derechos reservados a monkeys games | SM-43 | <Link to = "/frase-gigapro">🐵</Link></div>
+                        <div>Todos los derechos reservados a monkeys games | SM-43</div>
                         </footer>
         </>
     );
