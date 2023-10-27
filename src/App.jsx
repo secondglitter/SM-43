@@ -22,6 +22,7 @@ import Minecraft from './paginas/grupos/minecraft';
 import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
 import Updategroup from './paginas/updategroup';
+import ApiGob from './paginas/api_del_gobierno';
 
 
 
@@ -116,6 +117,10 @@ function App() {
     {
       path: "/grupos/redead",
       element: <RedeadII/>
+    },
+    {
+      path: "/gobierno",
+      element: <ApiGob/>
     },
     
     

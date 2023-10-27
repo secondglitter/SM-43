@@ -63,13 +63,13 @@ const Login = () => {
                                 <h2 className="inicio">Iniciar Sesión</h2>
                                 <div className="inputbox">
                                     <ion-icon name="mail-outline" />
-                                    <input type='email' placeholder="Correo Electronico" name="Correo_electronico" required />
+                                    <input type='email' placeholder="Correo Electronico" required />
                                     <label htmlFor="username">Correo Electronico:</label>
                                 </div>
                                 <div className="inputbox">
                                     <ion-icon name="lock-closed-outline" />
-                                    <input type='password' placeholder="Contraseña" name="Contrasenia" required />
-                                    <label htmlFor="password">Contraseña:</label>
+                                    <input type='password' placeholder="Contraseña" required />
+                                    <label >Contraseña:</label>
                                 </div>
                                 <button id="inicio1" type="submit">Ingresar</button>
                                 <br></br><br></br>

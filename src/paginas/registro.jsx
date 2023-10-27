@@ -82,18 +82,18 @@ function Registro() {
                 <div className="inputbox1">
                   <ion-icon name="mail-outline" />
 
-                  <input type='text' placeholder="Usuario" name="Nombre_usuario" onChange={(e) => setNewUsuario(e.target.value)} required />
-                  <label htmlFor="username">Usuario:</label>
+                  <input type='text' placeholder="Usuario" onChange={(e) => setNewUsuario(e.target.value)} required />
+                  <label >Usuario:</label>
                 </div>
                 <div className="inputbox1">
                   <ion-icon name="mail-outline" />
-                  <input type='email' placeholder="Correo Electronico" name="Correo_electronico" onChange={(e) => setNewEmail(e.target.value)} required />
-                  <label htmlFor="username">Correo Electronico:</label>
+                  <input type='email' placeholder="Correo Electronico" onChange={(e) => setNewEmail(e.target.value)} required />
+                  <label >Correo Electronico:</label>
                 </div>
                 <div className="inputbox1">
                   <ion-icon name="lock-closed-outline" />
-                  <input type='password' placeholder="Contraseña" name="Contrasenia" onChange={(e) => setNewContrasena(e.target.value)} required />
-                  <label htmlFor="password">Contraseña:</label>
+                  <input type='password' placeholder="Contraseña" onChange={(e) => setNewContrasena(e.target.value)} required />
+                  <label >Contraseña:</label>
                 </div>
                 <Link to="/login">
                   <button id="inicio1" onClick={() => addUser()}>Registrarse</button>
