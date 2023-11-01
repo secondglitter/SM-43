@@ -208,7 +208,7 @@ function Grupos() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href="/grupos/apex">
+                    <a href={"/grupos/" + groups.id}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {groups.NameGroup}
                     </a>

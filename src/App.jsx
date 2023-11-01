@@ -23,6 +23,7 @@ import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
 import Updategroup from './paginas/updategroup';
 import ApiGob from './paginas/api_del_gobierno';
+import Grupoid from './paginas/grupos-id';
 
 
 
@@ -85,6 +86,10 @@ function App() {
     {
       path: "/grupos",
       element: <Grupos/>
+    },
+    {
+      path: "/grupos/:id",
+      element: <Grupoid/>
     },
     {
       path: "/grupos/apex",

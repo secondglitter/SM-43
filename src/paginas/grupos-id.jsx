@@ -1,6 +1,9 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { StarIcon } from '@heroicons/react/20/solid'
+import { useParams } from "react-router-dom";
 
-const product = {
+/* const product = {
   name: 'Apex Legends',
   price: 'Contenido',
   href: '#',
@@ -38,25 +41,43 @@ const product = {
     'Diseñador: Mackey McCandlish',
     'Guionista: Mohammad Alavi',
   ],
-}
-const reviews = { href: '#', average: 3, totalCount: 24200 }
+} */
+const reviews = { average: 3, totalCount: 24200 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Apex() {
+export default function Grupoid() {
+  const { id } = useParams();
+
+const [Groups, setGroups] = useState([]);
+useEffect(() => {
+  fecthGroups(id)
+}, []);
+
+const fecthGroups = async (id) => {
+  try{
+  const response = await axios.get(`http://localhost:3000/groups/${id}`)
+  setGroups(response.data)
+  // console.log('Datos de la api')
+  // console.log(response.data)
+  } catch(error) {
+   // console.log(error)
+  }
+}
 
   return (
+    
+    
     <div className="bg-white">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            {product.breadcrumbs.map((breadcrumb) => (
-              <li key={breadcrumb.id}>
+              <li key={Groups.id}>
                 <div className="flex items-center">
-                  <a href={breadcrumb.href} className="mr-2 text-sm font-medium text-gray-900">
-                    {breadcrumb.name}
+                  <a href="/grupos" className="mr-2 text-sm font-medium text-gray-900">
+                    Regresar
                   </a>
                   <svg
                     width={16}
@@ -70,44 +91,45 @@ export default function Apex() {
                   </svg>
                 </div>
               </li>
-            ))}
             <li className="text-sm">
-              <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                {product.name}
+
+              <a href="/404" aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
+                {Groups.Class}
               </a>
             </li>
           </ol>
         </nav>
 
         {/* Image gallery */}
+        
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <img
-              src={product.images[0].src}
-              alt={product.images[0].alt}
+              src={`/imagenes/${Groups.Image1}`}
+              alt={Groups.Image}
               className="h-full w-full object-cover object-center"
             />
           </div>
           <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                src={product.images[1].src}
-                alt={product.images[1].alt}
-                className="h-full w-full object-cover object-center"
-              />
+            <img
+              src={`/imagenes/${Groups.Image2}`}
+              alt={Groups.Image}
+              className="h-full w-full object-cover object-center"
+            />
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                src={product.images[2].src}
-                alt={product.images[2].alt}
-                className="h-full w-full object-cover object-center"
-              />
+            <img
+              src={`/imagenes/${Groups.Image3}`}
+              alt={Groups.Image}
+              className="h-full w-full object-cover object-center"
+            />
             </div>
           </div>
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
-              src={product.images[3].src}
-              alt={product.images[3].alt}
+              src={`/imagenes/${Groups.Image}`}
+              alt={Groups.Image}
               className="h-full w-full object-cover object-center"
             />
           </div>
@@ -116,12 +138,12 @@ export default function Apex() {
         {/* Product info */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{Groups.NameGroup}</h1>
           </div>
 
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
-            <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+            <p className="text-3xl tracking-tight text-gray-900">Contenido</p>
 
             {/* Reviews */}
             <div className="mt-6">
@@ -138,8 +160,8 @@ export default function Apex() {
                     />
                   ))}
                 </div>
-                <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                <p className="sr-only">{reviews.average}</p>
+                <a className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
                   {reviews.totalCount} Miembros
                 </a>
               </div>
@@ -166,24 +188,27 @@ export default function Apex() {
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
+                <p className="text-base text-gray-900">{Groups.Description}</p>
               </div>
-            </div>
 
             <div className="mt-10">
               <h3 className="text-sm font-medium text-gray-900">Información general</h3>
 
               <div className="mt-4">
                 <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List1}</span>
                     </li>
-                  ))}
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List2}</span>
+                    </li>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List3}</span>
+                    </li>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List4}</span>
+                    </li>
                 </ul>
               </div>
             </div>

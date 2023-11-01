@@ -32,7 +32,7 @@ const product = {
   highlights: [
     'Plataformas: PlayStation 5, PlayStation 4, Xbox One, Xbox Series X|S, Microsoft Windows',
     'Fecha de estreno inicial: 25 de febrero de 2022',
-    ' Géneros: Videojuego de rol de acción, Videojuego de aventura, Videojuego de pelea, Videojuego de plataformas',
+    'Géneros: Videojuego de rol de acción, Videojuego de aventura, Videojuego de pelea, Videojuego de plataformas',
     'Desarrollador: FromSoftware',
     'Modo: Videojuego multijugador',
     'Guionistas: George R. R. Martin, Hidetaka Miyazaki',
