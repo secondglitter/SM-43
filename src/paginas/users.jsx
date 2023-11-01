@@ -52,7 +52,7 @@ function Users() {
                                                     Usuario
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
-                                                    Nombre del usuario
+                                                    Nombre de usuario
                                                 </th>
                                                 <th scope="col" class="px-6 py-3">
                                                     Correo

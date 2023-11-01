@@ -1,6 +1,5 @@
 main{
     margin: 50px;
-    
 }
 
 .foto{
@@ -12,6 +11,7 @@ main{
     border: 1px rgb(74, 71, 71) solid;
 }
 .texto{
+    color: #fff;
     font-size: 25px;
     line-height: 30px;
     text-align: justify;
@@ -28,7 +28,7 @@ main{
 .seccion-texto {
     width:70%;
     margin-bottom: 80px;
-    margin-left: 210px;
+    margin-left: 80px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;

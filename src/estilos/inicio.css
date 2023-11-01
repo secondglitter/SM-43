@@ -1,20 +1,101 @@
+
+
+.title-2 {
+  animation: flickering 2s linear infinite both;
+  display: block;
+  margin-top: -0.5rem;
+  font-size: 40PX;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  -webkit-text-stroke: #fff 0.1rem;
+  letter-spacing: 0.2rem;
+  color: transparent;
+  position: relative;
+  text-shadow: 0px 0px 16px #CECECE;
+}
+
+.title-2 span::before,
+.title-2 span::after {
+  content: '—';
+}
+
+@keyframes flickering {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  41.99% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 0;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  43.01% {
+    opacity: 1;
+  }
+
+  47.99% {
+    opacity: 1;
+  }
+
+  48% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0;
+  }
+
+  49.01% {
+    opacity: 1;
+  }
+}
+
 .inicio-container{
     text-align: center;
 }
-.bienvenida {
-        padding: 20px;
-        color: #000000;
-        animation: shine 3s ease-in-out infinite;
+.cube-card {
+        padding-left: 300px;
+        padding-top: 100px;
       }
-    
-      @keyframes shine {
-        0% {
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        }
-        50% {
-          text-shadow: 0 0 20px rgba(255, 255, 255, 1.0);
-        }
-        100% {
-          text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        }
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-vert-center 16s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 }
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.face img {
+  width: 150px; /* Establece el ancho de las imágenes al 100% del contenedor */
+  height: 140px; /* Establece la altura de las imágenes al 100% del contenedor */
+  max-width: 100%; /* Garantiza que las imágenes no sean más anchas que el contenedor */
+  max-height: 100%; /* Garantiza que las imágenes no sean más altas que el contenedor */
+  border-radius: 10px;
+}
+
+.front  { transform: rotateY(0deg) translateZ(70px); }
+.back   { transform: rotateY(180deg) translateZ(70px); }
+.left   { transform: rotateY(-90deg) translateZ(70px); }
+.right  { transform: rotateY(90deg) translateZ(70px); }

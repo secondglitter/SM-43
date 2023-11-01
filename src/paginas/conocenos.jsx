@@ -1,14 +1,16 @@
 import React from "react";
 import Encabezado from "../componentes/encabezado";
 import "../estilos/conocenos.css";
+import "../estilos/Animations.css";
 import Footer from "../componentes/footer";
-
+import Redes from "../componentes/Redes";
 
 // 2-
 function Texto() {
   // 3-
   return (
     <>
+    <div className="fondo-pro-3">
       <Encabezado />
       <div className="inicio-container">
         <main className="seccion-texto">
@@ -33,9 +35,11 @@ function Texto() {
             </p>
             <br />
           </div>
+        <Redes/>
         </main>
         </div>
       <Footer />
+      </div>
     </>
   );
 }
