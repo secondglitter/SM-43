@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .frase-fondo {
     background-image: url('https://c.wallhere.com/photos/2a/89/mountains_sky_snow_stars_night_space_winter_lights-258309.jpg!d');
     /* Ajusta el tamaño y el posicionamiento de la imagen de fondo según tus necesidades */
@@ -35,42 +34,4 @@
     100% {
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     }
-=======
-.frase-fondo {
-    background-image: url('https://c.wallhere.com/photos/2a/89/mountains_sky_snow_stars_night_space_winter_lights-258309.jpg!d');
-    /* Ajusta el tamaño y el posicionamiento de la imagen de fondo según tus necesidades */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: moveBackground 15s linear infinite;
-}
-
-.frase-texto {
-    font-size: 2rem;
-    background-color: #1F2937;
-    /* Fondo transparente con un valor de transparencia de 0.5 */
-    padding-block: 1rem;
-    backdrop-filter: blur(5px);
-    /* Difuminado con un radio de 5px */
-    border: 1px solid white;
-    text-align: center;
-    margin-top: auto;
-    /* Esta propiedad empuja el footer hacia abajo */
-    color: #fff;
-    animation: shine 3s ease-in-out infinite;
-}
-
-@keyframes shine {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    }
-
-    50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 1.0);
-    }
-
-    100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    }
->>>>>>> 6fdab3317e7e6244b5f5d573370dfe23d080f4fa
 }

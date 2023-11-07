@@ -1,0 +1,138 @@
+/* Estilo general de la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  /* Fijar el ancho de la tabla */
+}
+
+/* Estilo del encabezado de la tabla */
+.table th {
+  background-color: #007acc;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  position: sticky;
+  /* Fijar la fila de título */
+  top: 0;
+  /* Fijar en la parte superior */
+}
+
+/* Estilo de las celdas de datos alternas */
+.table tr:nth-child(even) {
+  background-color: #bcbcbc;
+}
+
+/* Estilo de las celdas de datos impares */
+.table tr:nth-child(odd) {
+  background-color: #959595;
+}
+
+/* Estilo de las celdas de datos al pasar el ratón sobre ellas */
+.table tr:hover {
+  background-color: #86b9e0;
+}
+
+/* Estilo de la celda seleccionada */
+.table tr.selected {
+  background-color: #007acc;
+  color: #fff;
+}
+
+/* Estilo de los enlaces dentro de la tabla */
+.table a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+/* Estilo de los enlaces al pasar el ratón sobre ellos */
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del contenido de la tabla */
+.table td {
+  padding: 12px;
+  word-wrap: break-word;
+  /* Romper palabras largas para ajustar el contenido */
+}
+
+/* Estilo del fondo negro de la tabla */
+.table-container {
+  background-color: #000;
+  /* Fondo negro */
+  color: #fff;
+  /* Color de texto blanco */
+}
+
+.scroll-table {
+  max-height: 510px;
+  /* Ajusta la altura máxima según tus necesidades */
+  max-width: 1000px;
+  overflow-y: scroll;
+}
+
+/* Estilo para la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+  /* Ajusta el margen superior según sea necesario */
+}
+
+.pagination-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  /* Espacio entre botones de paginación */
+  background-color: #007acc;
+  /* Color de fondo de los botones de paginación */
+  color: #fff;
+  /* Color del texto de los botones de paginación */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination-button:hover {
+  background-color: #01346e;
+  /* Color de fondo para la página actual */
+}
+
+.pagination-button:active {
+  background-color: #2b66a0;
+  /* Color de fondo para la página actual */
+}
+
+/* Estilo para el select y sus opciones */
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /* Ajusta el margen superior según sea necesario */
+}
+
+select {
+  padding: 5px;
+  background-color: #007acc; /* Cambiar el color de fondo del select */
+  color: #fff; /* Cambiar el color del texto del select */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+select:hover { /* Cambiar el color de fondo al pasar el ratón sobre el select */
+  color: #fff; /* Cambiar el color del texto al pasar el ratón sobre el select */
+}
+
+select option {
+  background-color: #959595; /* Cambiar el color de fondo de las opciones del select */
+  color: #fff; /* Cambiar el color del texto de las opciones del select */
+}
+
+select option:hover {
+  background-color: #007acc; /* Cambiar el color de fondo al pasar el ratón sobre las opciones del select */
+  color: #fff; /* Cambiar el color del texto al pasar el ratón sobre las opciones del select */
+}

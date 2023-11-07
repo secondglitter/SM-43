@@ -1,61 +1,83 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { StarIcon } from '@heroicons/react/20/solid'
+import { useParams } from "react-router-dom";
 
-const product = {
-  name: 'Mortal Kombat',
+/* const product = {
+  name: 'Apex Legends',
   price: 'Contenido',
   href: '#',
   breadcrumbs: [
     { id: 1, name: 'Regresar', href: '/grupos' },
-    { id: 3, name: 'Fight', href: '#' },
+    { id: 2, name: 'Battle Royale', href: '#' },
+    { id: 3, name: 'Shooter', href: '#' },
   ],
   images: [
     {
-      src: '/imagenes/Mortal_Kombat.jpg',
+      src: '/imagenes/apex1.jpg',
       alt: 'Two each of gray, white, and black shirts laying flat.',
     },
     {
-      src: '/imagenes/Mortal_Kombat1.jpg',
+      src: '/imagenes/apex2.jpg',
       alt: 'Model wearing plain black basic tee.',
     },
     {
-      src: '/imagenes/Mortal_Kombat2.jpg',
+      src: '/imagenes/apex3.jpg',
       alt: 'Model wearing plain gray basic tee.',
     },
     {
-      src: '/imagenes/Mortal_Kombat3.jpg',
+      src: '/imagenes/apex.jpg',
       alt: 'Model wearing plain white basic tee.',
     },
   ],
   description:
-    'Mortal Kombat (comúnmente abreviado MK) es una franquicia de videojuegos de lucha creada por Ed Boon y John Tobias en 1992. Las cuatro primeras entregas fueron distribuidas por Midway Games y lanzadas principalmente en máquinas arcade; posteriormente estuvieron disponibles en consolas domésticas.',
+    'Es un videojuego gratuito perteneciente a los géneros battle royale y hero shooter en primera persona, desarrollado por Respawn Entertainment y publicado por Electronic Arts. Fue lanzado para Microsoft Windows, PlayStation 4 y Xbox One el 4 de febrero de 2019.',
   highlights: [
     'Plataformas: PlayStation 5, Xbox One, Nintendo Switch, MÁS',
-    'Primer videojuego	Mortal Kombat (9 de agosto de 1992)',
-    'Ultimo videojuego	Mortal Kombat 1 (19 de septiembre de 2023)',
-    'Diseñadores: Ed Boon, John Tobias, Paulo Garcia, John Edwards',
-    'Adaptaciones: Mortal Kombat (2021), Mortal Kombat (1995), MÁS',
-    'Programadores: NetherRealm Studios, Midway Games, MÁS',
-    'Distribuidores: NetherRealm Studios, Midway Games, MÁS',
+    'Fecha de estreno inicial: 4 de febrero de 2019',
+    'Desarrolladores: Respawn Entertainment, Panic Button',
+    'Modo: Videojuego multijugador',
+    'Serie: Titanfall',
+    'Diseñador: Mackey McCandlish',
+    'Guionista: Mohammad Alavi',
   ],
-}
-const reviews = { href: '#', average: 4, totalCount: 15000 }
+} */
+const reviews = { average: 3, totalCount: 24200 }
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function MortalKombat() {
+export default function Grupoid() {
+  const { id } = useParams();
+
+const [Groups, setGroups] = useState([]);
+useEffect(() => {
+  fecthGroups(id)
+}, []);
+
+const fecthGroups = async (id) => {
+  try{
+  const response = await axios.get(`http://localhost:3000/groups/${id}`)
+  setGroups(response.data)
+  // console.log('Datos de la api')
+  // console.log(response.data)
+  } catch(error) {
+   // console.log(error)
+  }
+}
 
   return (
+    
+    
     <div className="bg-white">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-            {product.breadcrumbs.map((breadcrumb) => (
-              <li key={breadcrumb.id}>
+              <li key={Groups.id}>
                 <div className="flex items-center">
-                  <a href={breadcrumb.href} className="mr-2 text-sm font-medium text-gray-900">
-                    {breadcrumb.name}
+                  <a href="/grupos" className="mr-2 text-sm font-medium text-gray-900">
+                    Regresar
                   </a>
                   <svg
                     width={16}
@@ -69,44 +91,45 @@ export default function MortalKombat() {
                   </svg>
                 </div>
               </li>
-            ))}
             <li className="text-sm">
-              <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                {product.name}
+
+              <a href="/404" aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
+                {Groups.Class}
               </a>
             </li>
           </ol>
         </nav>
 
         {/* Image gallery */}
+        
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <img
-              src={product.images[0].src}
-              alt={product.images[0].alt}
+              src={`/imagenes/${Groups.Image1}`}
+              alt={Groups.Image}
               className="h-full w-full object-cover object-center"
             />
           </div>
           <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                src={product.images[1].src}
-                alt={product.images[1].alt}
-                className="h-full w-full object-cover object-center"
-              />
+            <img
+              src={`/imagenes/${Groups.Image2}`}
+              alt={Groups.Image}
+              className="h-full w-full object-cover object-center"
+            />
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-              <img
-                src={product.images[2].src}
-                alt={product.images[2].alt}
-                className="h-full w-full object-cover object-center"
-              />
+            <img
+              src={`/imagenes/${Groups.Image3}`}
+              alt={Groups.Image}
+              className="h-full w-full object-cover object-center"
+            />
             </div>
           </div>
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
-              src={product.images[3].src}
-              alt={product.images[3].alt}
+              src={`/imagenes/${Groups.Image}`}
+              alt={Groups.Image}
               className="h-full w-full object-cover object-center"
             />
           </div>
@@ -115,12 +138,12 @@ export default function MortalKombat() {
         {/* Product info */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{Groups.NameGroup}</h1>
           </div>
 
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
-            <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+            <p className="text-3xl tracking-tight text-gray-900">Contenido</p>
 
             {/* Reviews */}
             <div className="mt-6">
@@ -137,8 +160,8 @@ export default function MortalKombat() {
                     />
                   ))}
                 </div>
-                <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                <p className="sr-only">{reviews.average}</p>
+                <a className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
                   {reviews.totalCount} Miembros
                 </a>
               </div>
@@ -165,24 +188,27 @@ export default function MortalKombat() {
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{product.description}</p>
+                <p className="text-base text-gray-900">{Groups.Description}</p>
               </div>
-            </div>
 
             <div className="mt-10">
               <h3 className="text-sm font-medium text-gray-900">Información general</h3>
 
               <div className="mt-4">
                 <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List1}</span>
                     </li>
-                  ))}
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List2}</span>
+                    </li>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List3}</span>
+                    </li>
+                    <li key={Groups.id} className="text-gray-400">
+                      <span className="text-gray-600">{Groups.List4}</span>
+                    </li>
                 </ul>
               </div>
             </div>

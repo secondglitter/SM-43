@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 main{
     margin: 50px;
-    
 }
 
 .foto{
@@ -13,6 +11,7 @@ main{
     border: 1px rgb(74, 71, 71) solid;
 }
 .texto{
+    color: #fff;
     font-size: 25px;
     line-height: 30px;
     text-align: justify;
@@ -29,7 +28,7 @@ main{
 .seccion-texto {
     width:70%;
     margin-bottom: 80px;
-    margin-left: 210px;
+    margin-left: 80px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -38,44 +37,4 @@ main{
     background-color: rgba(255, 255, 255, 0.1); /* Ajusta el valor de transparencia según tus preferencias */
     backdrop-filter: blur(16px);
 }
-=======
-main{
-    margin: 50px;
-}
-
-.foto{
-    float: right;
-    width: 25%;
-    margin-left: 20px;
-    padding: 2px;
-    /* BORDER: TAMAÑO COLOR TIPO */
-    border: 1px rgb(74, 71, 71) solid;
-}
-.texto{
-    font-size: 25px;
-    line-height: 30px;
-    text-align: justify;
-}
-
-.izquierda {
-    text-align: left;
-    font-size: 48px;
-    font-family: 'sans-serif';
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-.seccion-texto {
-    width:70%;
-    margin-bottom: 80px;
-    margin-left: 210px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    /* Nuevos estilos para fondo defuminado */
-    background-color: rgba(255, 255, 255, 0.1); /* Ajusta el valor de transparencia según tus preferencias */
-    backdrop-filter: blur(16px);
-}
->>>>>>> 6fdab3317e7e6244b5f5d573370dfe23d080f4fa
   

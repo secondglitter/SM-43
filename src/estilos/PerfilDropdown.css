@@ -1,0 +1,13 @@
+.perfil-dropdown {
+    position: absolute;
+    top: 100%; /* Muestra el perfil debajo del botón */
+    right: 0; /* Alinea el perfil a la derecha */
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que esté por encima del encabezado */
+    min-width: 200px; /* Ajusta el ancho según tus necesidades */
+    padding: 10px;
+  }
+  
+  
