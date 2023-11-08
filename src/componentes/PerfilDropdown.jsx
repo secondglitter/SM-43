@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import PerfilMini from './Perfil-Mini';
 
 function PerfilDropdown() {
@@ -16,7 +15,7 @@ function PerfilDropdown() {
       </button>
       {perfilVisible && (
         <div className="perfil-dropdown">
-          <Link to="/404"><PerfilMini /></Link>
+          <PerfilMini />
         </div>
       )}
     </div>

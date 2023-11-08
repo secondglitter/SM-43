@@ -26,9 +26,6 @@ function Usuarios() {
                                                 <th scope="col" class="px-6 py-3">
                                                     Nombre de usuario
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Contraseña
-                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -47,9 +44,6 @@ function Usuarios() {
                                                     </td>
                                                     <td class="px-6 py-4">
                                                         {users.UserName}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.Password}
                                                     </td>
                                                     <td class="px-6 py-4">
                                                         <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

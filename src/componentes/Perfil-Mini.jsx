@@ -1,6 +1,7 @@
 // 1- importar react
 import React from 'react';
 import '../estilos/Perfil-Mini.css';
+import { Link } from 'react-router-dom';
 
 // 2- crear la función
 function PERFILMIN() {
@@ -50,8 +51,7 @@ function PERFILMIN() {
                         <span className="regular-text">Tiempo</span>
                     </div>
                     <div className="item">
-                        <span className="big-text">334</span>
-                        <span className="regular-text">Logros</span>
+                        <Link to = "/404"><span className="regular-text">Editar perfil</span></Link>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@ import Categorias from './paginas/cateogias';
 
 
 function App() {
-  
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -182,8 +182,8 @@ function App() {
       path: "/categorias",
       element: <Categorias/>
     },
-    
-    
+
+
   ])
   return(
     <>

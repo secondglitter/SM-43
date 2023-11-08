@@ -28,6 +28,12 @@
   }
 }
 
+/* hover-grupos */
+
+.separacion:hover{
+  background-color: midnightblue;
+}
+
 
 /* Animaciones para cards e imagenes*/
 

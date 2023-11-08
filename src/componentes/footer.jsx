@@ -11,7 +11,7 @@ function Footer() {
     return (
         <>
                         <footer class="footer">
-                        <div>Todos los derechos reservados a monkeys games | SM-43 | <Link to = "/frase-gigapro">🐵</Link></div>
+                        <div>Todos los derechos reservados a monkeys games | SM-43 | <Link to = "/Frase-Gigapro">🐵</Link></div>
                         </footer>
         </>
     );

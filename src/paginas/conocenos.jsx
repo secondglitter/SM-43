@@ -10,36 +10,156 @@ function Texto() {
   // 3-
   return (
     <>
-    <div className="fondo-pro-3">
-      <Encabezado />
-      <div className="inicio-container">
-        <main className="seccion-texto">
-          <div className="texto">
-            <br /><br />
-            <h1 className="izquierda">Conócenos</h1>
-            <br />
-            <img src= '/imagenes/conocenos.png' alt="Acceso principal" className="foto" />
-            <p>
-              Somos una empresa apasionada por la innovación y los gadgets de vanguardia. En un mundo en constante evolución tecnológica, 
-              nos enorgullece ofrecer una amplia gama de dispositivos electrónicos que se adaptan a las necesidades y estilos de vida de nuestros 
-              clientes. <br /><br />
-              Nuestro objetivo es brindar experiencias extraordinarias a través de productos que combinan un diseño elegante, 
-              funcionalidad excepcional y la última tecnología disponible. Desde teléfonos inteligentes de última generación hasta wearables 
-              inteligentes, altavoces inalámbricos y accesorios conectados, cada artículo en nuestro catálogo ha sido cuidadosamente seleccionado 
-              para superar las expectativas de nuestros clientes. <br /><br />
-              Nos esforzamos por mantenernos a la vanguardia de la industria, colaborando con 
-              los principales fabricantes y siguiendo de cerca las tendencias emergentes. Además, nuestro equipo altamente capacitado está dedicado
-               a proporcionar un servicio al cliente excepcional, brindando asesoramiento experto y soluciones personalizadas. Confiar en nosotros 
-               significa estar un paso adelante en el mundo de la tecnología y disfrutar de productos que hacen nuestra vida más cómoda, 
-               emocionante y conectada. ¡Bienvenido a nuestro mundo de gadgets de última generación!
-            </p>
-            <br />
+      <div className="fondo-pro-3">
+        <Encabezado />
+        <div className="inicio-container">
+          <main className="seccion-texto">
+            <div className="texto">
+              <br /><br />
+              <h1 className="izquierda">Conócenos</h1>
+              <br />
+              <img src='/imagenes/conocenos.png' alt="Acceso principal" className="foto" />
+              <p>
+                Somos un equipo apasionado de jugadores y entusiastas de los videojuegos. Nos hemos unido para crear un lugar donde los jugadores de todas las edades y niveles de habilidad puedan encontrar un hogar en línea. Nuestra comunidad es diversa y acogedora, y estamos aquí para fomentar la amistad, la competencia saludable y el intercambio de conocimientos. <br /><br />
+                Queremos construir la comunidad de videojuegos en línea más vibrante y unida. Queremos que te sientas parte de algo más grande, donde puedas discutir tus juegos favoritos, encontrar compañeros de juego, obtener consejos y trucos, y celebrar tus logros. <br /><br />
+                Te invitamos a unirte a MOKEYS GAMES y a formar parte de esta emocionante comunidad de videojuegos. ¡Regístrate hoy y comienza tu viaje en el mundo de los videojuegos como nunca antes! Juntos, creamos una comunidad que celebra la diversidad, la amistad y la pasión por los juegos.
+              </p>
+
+
+
+              <br />
+            </div>
+<div className="flex-2">
+            <div className="container-1 noselect">
+          <div className="canvas">
+            <div className="tracker tr-1" />
+            <div className="tracker tr-2" />
+            <div className="tracker tr-3" />
+            <div className="tracker tr-4" />
+            <div className="tracker tr-5" />
+            <div className="tracker tr-6" />
+            <div className="tracker tr-7" />
+            <div className="tracker tr-8" />
+            <div className="tracker tr-9" />
+            <div className="tracker tr-10" />
+            <div className="tracker tr-11" />
+            <div className="tracker tr-12" />
+            <div className="tracker tr-13" />
+            <div className="tracker tr-14" />
+            <div className="tracker tr-15" />
+            <div className="tracker tr-16" />
+            <div className="tracker tr-17" />
+            <div className="tracker tr-18" />
+            <div className="tracker tr-19" />
+            <div className="tracker tr-20" />
+            <div className="tracker tr-21" />
+            <div className="tracker tr-22" />
+            <div className="tracker tr-23" />
+            <div className="tracker tr-24" />
+            <div className="tracker tr-25" />
+            <div id="card-m">
+              <p id="prompt">MISIÓN</p>
+              <div className="title">
+                Potenciar la diversión <br />y la comunidad en el <br />
+                mundo de los <br />
+                videojuegos.
+              </div>
+            </div>
           </div>
-        <Redes/>
-        </main>
         </div>
-      <Footer />
+
+        <div className="container-1 noselect">
+          <div className="canvas">
+            <div className="tracker tr-1" />
+            <div className="tracker tr-2" />
+            <div className="tracker tr-3" />
+            <div className="tracker tr-4" />
+            <div className="tracker tr-5" />
+            <div className="tracker tr-6" />
+            <div className="tracker tr-7" />
+            <div className="tracker tr-8" />
+            <div className="tracker tr-9" />
+            <div className="tracker tr-10" />
+            <div className="tracker tr-11" />
+            <div className="tracker tr-12" />
+            <div className="tracker tr-13" />
+            <div className="tracker tr-14" />
+            <div className="tracker tr-15" />
+            <div className="tracker tr-16" />
+            <div className="tracker tr-17" />
+            <div className="tracker tr-18" />
+            <div className="tracker tr-19" />
+            <div className="tracker tr-20" />
+            <div className="tracker tr-21" />
+            <div className="tracker tr-22" />
+            <div className="tracker tr-23" />
+            <div className="tracker tr-24" />
+            <div className="tracker tr-25" />
+            <div id="card-m">
+              <p id="prompt">VISIÓN</p>
+              <div className="title">
+              Ser la plataforma líder en la construcción <br />de comunidades de videojuegos, <br />
+                conectando jugadores <br /> de todo el mundo.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container-1 noselect">
+          <div className="canvas">
+            <div className="tracker tr-1" />
+            <div className="tracker tr-2" />
+            <div className="tracker tr-3" />
+            <div className="tracker tr-4" />
+            <div className="tracker tr-5" />
+            <div className="tracker tr-6" />
+            <div className="tracker tr-7" />
+            <div className="tracker tr-8" />
+            <div className="tracker tr-9" />
+            <div className="tracker tr-10" />
+            <div className="tracker tr-11" />
+            <div className="tracker tr-12" />
+            <div className="tracker tr-13" />
+            <div className="tracker tr-14" />
+            <div className="tracker tr-15" />
+            <div className="tracker tr-16" />
+            <div className="tracker tr-17" />
+            <div className="tracker tr-18" />
+            <div className="tracker tr-19" />
+            <div className="tracker tr-20" />
+            <div className="tracker tr-21" />
+            <div className="tracker tr-22" />
+            <div className="tracker tr-23" />
+            <div className="tracker tr-24" />
+            <div className="tracker tr-25" />
+            <div id="card-m">
+              <p id="prompt">OBJETIVO</p>
+              <div className="title">
+              Facilitar la interacción y el entretenimiento <br />de los gamers, promoviendo un <br />
+              ambiente inclusivo y divertido. <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Redes />
+          </main>
+
+
+          
+        </div>
+
+        
+
+        <Footer />
       </div>
+      
     </>
   );
 }

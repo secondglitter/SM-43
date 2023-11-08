@@ -14,7 +14,7 @@ function Encabezado() {
             <div className="flex flex-1 items-center">
               <div className="flex flex-shrink-0 items-center">
                 <Link to="/">
-                  <img className="h-8 w-auto rotate-vert-center" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Logo" />
+                  <img className="h-8 logo-size rotate-vert-center" src="../imagenes/Logo.png" alt="Logo" />
                 </Link>
               </div>
               <div className="hidden sm:ml-6 sm:block">

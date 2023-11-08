@@ -57,9 +57,6 @@ function Users() {
                                                 <th scope="col" class="px-6 py-3">
                                                     Correo
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Contraseña
-                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -75,9 +72,6 @@ function Users() {
                                                     </td>
                                                     <td class="px-6 py-4">
                                                         {users.Email}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {users.Password}
                                                     </td>
                                                     <td class="px-6 py-4">
                                                       <Link to={"/updateuser/" + users.id}>

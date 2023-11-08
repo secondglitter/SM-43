@@ -30,10 +30,10 @@ function Menu() {
                     <ul className="absolute mt-2 text-white rounded-md text-sm font-medium">
                         <li className="roll-in-top"><Link to="/login"><button className="button-list shining-text">Iniciar Sesión</button></Link></li>
                         <li className="roll-in-top-2"><Link to="/404"><button className="button-list shining-text">Perfil</button></Link></li>
-                        <li className="roll-in-top-3"><Link to="/API"><button className="button-list shining-text">API de gobierno</button></Link></li>
+                        <li className="roll-in-top-3"><Link to="/404"><button className="button-list shining-text">Grupos</button></Link></li>
                         <li className="roll-in-top-4"><Link to="/404"><button className="button-list shining-text">Amigos</button></Link></li>
-                        <li className="roll-in-top-5"><Link to="/404"><button className="button-list shining-text">Cuentas</button></Link></li>
-                        <li className="roll-in-top-6"><Link to="/404"><button className="button-list shining-text">Configuración</button></Link></li>
+                        <li className="roll-in-top-5"><Link to="/404"><button className="button-list shining-text">Juegos</button></Link></li>
+                        <li className="roll-in-top-6"><Link to="/404"><button className="button-list shining-text">Cuentas</button></Link></li>
                     </ul>
                 )}
             </div>
