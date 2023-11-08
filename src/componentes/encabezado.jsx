@@ -20,10 +20,11 @@ function Encabezado() {
               <div className="hidden sm:ml-6 sm:block">
                 <div className=" space-x-4">
                   <Link to="/"><button className="glitch-button text-list-menu shining-text">Inicio</button></Link>
-                  <Link to="/dashboard"><button className="glitch-button text-list-menu shining-text">Dashboard</button></Link>
+                  <Link to="/dashboard"><button className="glitch-button text-list-menu shining-text">Dash</button></Link>
                   <Link to="/conocenos"><button className="glitch-button text-list-menu shining-text">Conócenos</button></Link>
                   <Link to="/presentacion"><button className="glitch-button text-list-menu shining-text">Grupos</button></Link>
-                  <Link to="/404"><button className="glitch-button text-list-menu shining-text">Noticias</button></Link>
+                  <Link to="/categorias"><button className="glitch-button text-list-menu shining-text">Categorias</button></Link>
+                  <Link to="/noticias"><button className="glitch-button text-list-menu shining-text">Noticias</button></Link>
                 </div>
               </div>
             </div>

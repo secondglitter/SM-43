@@ -6,11 +6,23 @@ import ERROR from './componentes/404';
 import Login from './paginas/login';
 import Registro from './paginas/registro';
 import Texto from './paginas/conocenos';
+//User
 import Users from './paginas/users';
 import Newuser from './paginas/newuser';
 import Updateuser from './paginas/updateuser';
+//Group
 import Group from './paginas/group';
 import Newgroup from './paginas/newgroup';
+import Updategroup from './paginas/updategroup';
+//Frases
+import Frases from './paginas/frases';
+import NewFrase from './paginas/newfrase';
+import Updatefrase from './paginas/updatefrase';
+//Category
+import Category from './paginas/category';
+import NewCategory from './paginas/newcategory';
+import Updatecategory from './paginas/updatecategory';
+//Paginas
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
 import Apex from './paginas/grupos/apex';
@@ -21,10 +33,12 @@ import Lol from './paginas/grupos/lol';
 import Minecraft from './paginas/grupos/minecraft';
 import MortalKombat from './paginas/grupos/mortalkombat';
 import RedeadII from './paginas/grupos/rd2';
-import Updategroup from './paginas/updategroup';
 import API from './paginas/API';
 import ApiGob from './paginas/api_del_gobierno';
 import Grupoid from './paginas/grupos-id';
+import Frase from './paginas/frase-gigapro';
+import Noticias from './paginas/noticias';
+import Categorias from './paginas/cateogias';
 
 
 
@@ -85,6 +99,30 @@ function App() {
       element: <InicioGrupos/>
     },
     {
+      path: "/frases",
+      element: <Frases/>
+    },
+    {
+      path: "/newfrase",
+      element: <NewFrase/>
+    },
+    {
+      path: "/updatefrase/:id",
+      element: <Updatefrase/>
+    },
+    {
+      path: "/category",
+      element: <Category/>
+    },
+    {
+      path: "/newcategory",
+      element: <NewCategory/>
+    },
+    {
+      path: "/updatecategory/:id",
+      element: <Updatecategory/>
+    },
+    {
       path: "/grupos",
       element: <Grupos/>
     },
@@ -131,6 +169,18 @@ function App() {
     {
       path: "/gobierno",
       element: <ApiGob/>
+    },
+    {
+      path: "/frase-gigapro/",
+      element: <Frase/>
+    },
+    {
+      path: "/noticias",
+      element: <Noticias/>
+    },
+    {
+      path: "/categorias",
+      element: <Categorias/>
     },
     
     

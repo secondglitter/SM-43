@@ -3,46 +3,43 @@ import axios from "axios";
 import { Formik } from "formik";
 import { useParams,Link } from "react-router-dom";
 
-export default function Updateuser() {
+export default function Updatecategory() {
   const {id} = useParams();
   console.log(id);
 
-  const [User, setUsers] = useState({
-    UserName: "",
-    Email: "",
-    Password: "",
+  const [Categorias, setCategorias] = useState({
+    Categoria: "",
+    Imagen: "",
   });
 
   useEffect(() => {
-    const loadUser = async () => {
+    const loadCategoria = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${id}`);
+        const response = await axios.get(`http://localhost:3000/categorias/${id}`);
         console.log(response);
-        setUsers({
-          UserName: response.data.UserName,
-          Email: response.data.Email,
-          Password: response.data.Password,
+        setCategorias({
+            Categoria: response.data.Categoria,
+            Imagen: response.data.Imagen,
         });
       } catch (error) {
         console.error("Error while loading user: ", error);
       }
     };
 
-    loadUser();
+    loadCategoria();
   }, [id]);
 
-  const Editar = async (user, correo, password) => {
-    await axios.patch(`http://localhost:3000/users/${id}`, {
-      UserName: user,
-      Email: correo, 
-      Password: password
+  const Editar = async (categoria, imagen) => {
+    await axios.patch(`http://localhost:3000/categorias/${id}`, {
+        Categoria: categoria,
+        Imagen: imagen, 
     });
   }
 
   return (
     <div className="container mx-15 w-50 p-20">
       <Formik
-        initialValues={User}
+        initialValues={Categorias}
         enableReinitialize={true}
         onSubmit={async (values, actions) => {
           console.log(values);
@@ -52,7 +49,7 @@ export default function Updateuser() {
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
       <img className="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-      <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Usuario a editar</h2>
+      <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Categoria a editar</h2>
     </div>
 
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -60,58 +57,42 @@ export default function Updateuser() {
         
         <div>
           <label className="block text-sm font-medium leading-6 text-gray-900">
-            Nombre del usuario
+            Categoria
           </label>
           <div className="mt-2">
             <input
-              name="UserName"
+              name="Categoria"
               type="text"
               required
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               onChange={handleChange}
-              value={values.UserName}
+              value={values.Categoria}
             />
           </div>
         </div>
 
         <div>
           <label className="block text-sm font-medium leading-6 text-gray-900">
-            Email
+            Imagen
           </label>
           <div className="mt-2">
             <input
-              name="Email"
-              type="email"
+              name="Imagen"
+              type="text"
               required
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               onChange={handleChange}
-              value={values.Email}
-            />
-          </div>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium leading-6 text-gray-900">
-            Contraseña
-          </label>
-          <div className="mt-2">
-            <input
-              name="Password"
-              type="password"
-              required
-              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              onChange={handleChange}
-              value={values.Password}
+              value={values.Imagen}
             />
           </div>
         </div>
 
         <div> 
-        <Link to="/users">
+        <Link to="/category">
           <button
             type='onSubmit'
             className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            onClick={() => Editar(values.UserName, values.Email, values.Password)}
+            onClick={() => Editar(values.Categoria, values.Imagen)}
           >
             Actualizar
           </button>
