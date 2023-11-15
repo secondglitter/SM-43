@@ -46,7 +46,7 @@ function ApiGob() {
                     <div className="p-20 border-dashed">
 
                         <div className="flex items-center justify-center h-48 mb-4 rounded">
-                            <div className="scroll-table">
+                            <div className="scroll-gob">
                                 <div className="relative  left-70 top-24">
                                     <select
                                         className="form-select form-select-lg mb-3"

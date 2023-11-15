@@ -13,7 +13,7 @@ function Noticias() {
     const fetchNoticias = async () => {
         try {
             const response = await axios.get(
-                'https://newsapi.org/v2/everything?q=videojuegos&from=2023-11-01&to=2023-11-07&apiKey=5c089e19f2324d0583f5b57f90c48f42'
+                'https://newsapi.org/v2/everything?q=videojuegos&from=2023-11-01&to=2023-11-09&apiKey=5c089e19f2324d0583f5b57f90c48f42'
             );
             setNoticias(response.data.articles);
             console.log('Datos de la API', response.data);

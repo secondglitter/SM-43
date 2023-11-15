@@ -1,5 +1,5 @@
-// 1-
-import React from "react";
+import React,{useState, useEffect} from "react";
+import axios from "axios";
 import '../estilos/inicio.css';
 import '../estilos/Animations.css';
 import '../estilos/Cube.css';
@@ -7,9 +7,28 @@ import '../estilos/article-card.css';
 import Header from "../componentes/encabezado";
 import Footer from "../componentes/footer";
 import { Link } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 // 2-
 function Inicio() {
+  const { id } = useParams();
+
+const [Groups, setGroups] = useState([]);
+useEffect(() => {
+  fecthGroups(id)
+}, []);
+
+const fecthGroups = async (id) => {
+  try{
+  const response = await axios.get(`http://localhost:3000/groups/${id}`)
+  setGroups(response.data)
+  // console.log('Datos de la api')
+  // console.log(response.data)
+  } catch(error) {
+   // console.log(error)
+  }
+}
+
   // 3-
   return (
     <>
@@ -24,8 +43,11 @@ function Inicio() {
         <br />
         <br />
         <div className="contenido">
-          <div className="seccion" style={{ border: '2px solid white', padding: '20px', width: '100%', height: '100px' }}>
-
+          <div className="seccion" style={{ padding: '3px', width: '100%', height: '100px' }}>
+          <span className="title-3">-Frase del día-</span>
+          <br></br>
+            <span className="title-3">Solía ser un aventurero como tú, pero luego me dispararon una flecha en la rodilla.</span>
+            <span className="title-3">- The Elder Scrolls V: Skyrim</span>
             <div className="card-container-1">
               <div className="card-1">
                 <div className="main-content">
@@ -105,7 +127,7 @@ function Inicio() {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to="/grupos/lol"><img src="/imagenes/lol.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -118,7 +140,7 @@ function Inicio() {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to="/grupos/cod"><img src="/imagenes/cod.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -131,7 +153,7 @@ function Inicio() {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to="/grupos/forhonor"><img src="/imagenes/ForHonor.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -153,7 +175,6 @@ function Inicio() {
                   <Link to="/grupos/forhonor"><img src="/imagenes/ForHonor.jpg" /></Link>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="image-container">
@@ -163,6 +184,7 @@ function Inicio() {
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br />
       </div>
 
 

@@ -40,7 +40,7 @@ function PERFILMIN() {
                 </div>
             </div>
             <div className="bottom-section">
-                <span className="title">LORD LOBATO</span>
+                <span className="title-p">LORD LOBATO</span>
                 <div className="row row1">
                     <div className="item">
                         <span className="big-text">201,212</span>
