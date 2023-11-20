@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../estilos/inicio.css';
 import '../estilos/Animations.css';
@@ -11,23 +11,108 @@ import { useParams } from "react-router-dom";
 
 // 2-
 function Inicio() {
+
+  //apex
+
   const { id } = useParams();
 
-const [Groups, setGroups] = useState([]);
-useEffect(() => {
-  fecthGroups(id)
-}, []);
+  const [Groups, setGroups] = useState([]);
+  useEffect(() => {
+    fecthGroups(1)
+  }, []);
 
-const fecthGroups = async (id) => {
-  try{
-  const response = await axios.get(`http://localhost:3000/groups/${id}`)
-  setGroups(response.data)
-  // console.log('Datos de la api')
-  // console.log(response.data)
-  } catch(error) {
-   // console.log(error)
+  const fecthGroups = async (id) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/groups/${id}`)
+      setGroups(response.data)
+      // console.log('Datos de la api')
+      // console.log(response.data)
+    } catch (error) {
+      // console.log(error)
+    }
   }
-}
+
+  //cod
+
+  const { id1 } = useParams();
+
+  const [Groups1, setGroups1] = useState([]);
+  useEffect(() => {
+    fecthGroups1(2)
+  }, []);
+
+  const fecthGroups1 = async (id1) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/groups/${id1}`)
+      setGroups1(response.data)
+      // console.log('Datos de la api')
+      // console.log(response.data)
+    } catch (error) {
+      // console.log(error)
+    }
+  }
+
+  //LoL
+
+  const { id2 } = useParams();
+
+  const [Groups2, setGroups2] = useState([]);
+  useEffect(() => {
+    fecthGroups2(3)
+  }, []);
+
+  const fecthGroups2 = async (id2) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/groups/${id2}`)
+      setGroups2(response.data)
+      // console.log('Datos de la api')
+      // console.log(response.data)
+    } catch (error) {
+      // console.log(error)
+    }
+  }
+
+  //For Honor
+
+  const { id3 } = useParams();
+
+  const [Groups3, setGroups3] = useState([]);
+  useEffect(() => {
+    fecthGroups3(4)
+  }, []);
+
+  const fecthGroups3 = async (id3) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/groups/${id3}`)
+      setGroups3(response.data)
+      // console.log('Datos de la api')
+      // console.log(response.data)
+    } catch (error) {
+      // console.log(error)
+    }
+  }
+
+  //frase
+
+  const [frases, setFrases] = useState({});
+  const randomId = Math.floor(Math.random() * 10) + 1;
+
+  useEffect(() => {
+    const loadUser = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3001/frases/${randomId}`);
+        console.log(response);
+        setFrases({
+          Texto: response.data.Texto,
+          Autor: response.data.Autor,
+        });
+      } catch (error) {
+        console.error("Error while loading user: ", error);
+      }
+    };
+
+    loadUser();
+  }, [randomId]);
 
   // 3-
   return (
@@ -44,10 +129,10 @@ const fecthGroups = async (id) => {
         <br />
         <div className="contenido">
           <div className="seccion" style={{ padding: '3px', width: '100%', height: '100px' }}>
-          <span className="title-3">-Frase del día-</span>
-          <br></br>
-            <span className="title-3">Solía ser un aventurero como tú, pero luego me dispararon una flecha en la rodilla.</span>
-            <span className="title-3">- The Elder Scrolls V: Skyrim</span>
+            <span className="title-3">-Frase del día-</span>
+            <br></br>
+            <span className="title-3">{frases.Texto}</span>
+            <span className="title-3">{frases.Autor}</span>
             <div className="card-container-1">
               <div className="card-1">
                 <div className="main-content">
@@ -55,11 +140,11 @@ const fecthGroups = async (id) => {
                     <span>Articulo emitido el</span>
                     <span>7-Nov-2023</span>
                   </div>
-                  <p className="heading">Conoce sobre lo nuevo en Monkeys Games</p>
+                  <p className="heading">Conoce sobre Monkeys Games</p>
                   <br />
                   <div className="categories">
-                    <span>Actualizaciones</span>
-                    <span>Novedad</span>
+                    <span>Sociales</span>
+                    <span>Comunidad</span>
                   </div>
                 </div>
                 <div className="by">
@@ -75,7 +160,7 @@ const fecthGroups = async (id) => {
                     <span>Articulo emitido el</span>
                     <span>7-Nov-2023</span>
                   </div>
-                  <p className="heading">Conoce nuestras comunidades</p>
+                  <p className="heading">Conoce nuestros grupos</p>
                   <br />
                   <div className="categories">
                     <span>Sociales</span>
@@ -95,7 +180,7 @@ const fecthGroups = async (id) => {
                     <span>Articulo emitido el</span>
                     <span>7-Nov-2023</span>
                   </div>
-                  <p className="heading">Adentrate en tus juegos favoritos con tus amigos!</p>
+                  <p className="heading">Adentrate en las noticias de tus juegos favoritos </p>
                   <br />
                   <div className="categories">
                     <span>Videojuegos</span>
@@ -115,7 +200,9 @@ const fecthGroups = async (id) => {
                   En mokeys games puedes pasar unos ratos de diversión con tus amigos y si
                   no tienes amigos pues puedes hacer algunos...
                 </p>
-                <button className="btn-art">VAMOS JUGAR</button>
+                <Link to="/trivia">
+                <button  className="btn-art">VAMOS JUGAR</button>
+                </Link>
               </div>
             </div>
 
@@ -127,7 +214,7 @@ const fecthGroups = async (id) => {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
+                  <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -140,7 +227,7 @@ const fecthGroups = async (id) => {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
+                  <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -153,7 +240,7 @@ const fecthGroups = async (id) => {
                   <p className="title2">☝🏼</p>
                 </div>
                 <div className="backSide">
-                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
+                  <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
                 </div>
               </div>
             </div>
@@ -163,16 +250,16 @@ const fecthGroups = async (id) => {
             <div className="cube-card">
               <div className="cube">
                 <div className="face front">
-                  <Link to="/grupos/lol"><img src="/imagenes/lol.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
                 </div>
                 <div className="face back">
-                  <Link to="/grupos/apex"><img src="/imagenes/apex.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
                 </div>
                 <div className="face left">
-                  <Link to="/grupos/cod"><img src="/imagenes/cod.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
                 </div>
                 <div className="face right">
-                  <Link to="/grupos/forhonor"><img src="/imagenes/ForHonor.jpg" /></Link>
+                  <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
                 </div>
               </div>
             </div>

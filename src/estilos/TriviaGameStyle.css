@@ -1,0 +1,102 @@
+.trivia-container {
+    background-image: url('../Imagenes/Leonardo_Diffusion_XL_creame_una_imagen_de_fondo_centrada_en_v_2.jpg');
+    background-size: cover;
+    background-position-y: -230px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Cambiado a min-height */
+    width: 100%;
+    position: relative; /* Agregado position relative */
+}
+
+
+.trivia-container h1 {
+    font-size: 50px;
+    color: #FF7F50;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 20px; /* Ajuste del espacio debajo del título */
+}
+
+.question-container {
+    color: white;
+    max-width: 100%;
+    width: 80%;
+    margin-left: 130px;
+    background: linear-gradient(#03dc82, rgb(3, 119, 106));
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Agregado position relative */
+    z-index: 1; /* Ajuste de z-index */
+}
+
+.answer-option {
+    margin: 10px 0;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-buttons button {
+    background: linear-gradient(#5b7bfe, rgb(4, 1, 103));
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navigation-buttons button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(#d05bfe, rgb(156, 16, 16));
+
+}
+
+.navigation-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.result-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    overflow-y: auto; /* Permitir desplazamiento vertical si hay demasiadas respuestas */
+    max-height: 300px; /* Altura máxima del contenedor, ajusta según sea necesario */
+}
+
+/* Estilos adicionales para las respuestas */
+.result-container h3 {
+    font-size: 24px;
+    color: #0033ff;
+}
+
+.result-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-container li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.result-container p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #9512E6;
+}

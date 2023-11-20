@@ -39,6 +39,10 @@ import Grupoid from './paginas/grupos-id';
 import Frase from './paginas/frase-gigapro';
 import Noticias from './paginas/noticias';
 import Categorias from './paginas/cateogias';
+import TablaTrivia from './paginas/tabla-de-trivia';
+import Newtrivia from './paginas/newtrivia';
+import Updatetrivia from './paginas/updatetrivia';
+import TriviaGame from './paginas/trivia';
 
 
 
@@ -181,6 +185,22 @@ function App() {
     {
       path: "/categorias",
       element: <Categorias/>
+    },
+    {
+      path: "/tablatrivia",
+      element: <TablaTrivia/>
+    },
+    {
+      path: "/newtrivia",
+      element: <Newtrivia/>
+    },
+    {
+      path: "/updatetrivia/:id",
+      element: <Updatetrivia/>
+    },
+    {
+      path: "/trivia",
+      element: <TriviaGame/>
     },
 
 
