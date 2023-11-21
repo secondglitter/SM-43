@@ -22,6 +22,10 @@ import Updatefrase from './paginas/updatefrase';
 import Category from './paginas/category';
 import NewCategory from './paginas/newcategory';
 import Updatecategory from './paginas/updatecategory';
+//Trivia
+import TablaTrivia from './paginas/tabla-de-trivia';
+import Newtrivia from './paginas/newtrivia';
+import Updatetrivia from './paginas/updatetrivia';
 //Paginas
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
@@ -39,10 +43,15 @@ import Grupoid from './paginas/grupos-id';
 import Frase from './paginas/frase-gigapro';
 import Noticias from './paginas/noticias';
 import Categorias from './paginas/cateogias';
-import TablaTrivia from './paginas/tabla-de-trivia';
-import Newtrivia from './paginas/newtrivia';
-import Updatetrivia from './paginas/updatetrivia';
 import TriviaGame from './paginas/trivia';
+//Categorias Paginas
+import Shooter from './categorias/shooter';
+import Moba from './categorias/moba';
+import Action from './categorias/action';
+import Construction from './categorias/construction';
+import Fight from './categorias/fight';
+import MundoAbierto from './categorias/mundo_abierto';
+import MenuGrupos from './paginas/menu-grupos';
 
 
 
@@ -52,162 +61,199 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Inicio/>
+      element: <Inicio />
     },
     {
       path: "/dashboard",
-      element: <Dashboard/>
+      element: <Dashboard />
     },
     {
       path: "/404",
-      element: <ERROR/>
+      element: <ERROR />
     },
     {
       path: "/login",
-      element: <Login/>
+      element: <Login />
     },
     {
       path: "/registro",
-      element: <Registro/>
+      element: <Registro />
     },
     {
       path: "/conocenos",
-      element: <Texto/>
+      element: <Texto />
     },
+    //CRUD DEL DASHBOARD
+    //Usuarios
     {
       path: "/users",
-      element: <Users/>
+      element: <Users />
     },
     {
       path: "/newuser",
-      element: <Newuser/>
+      element: <Newuser />
     },
     {
       path: "/updateuser/:id",
-      element: <Updateuser/>
+      element: <Updateuser />
     },
+    //Grupos
     {
       path: "/groups",
-      element: <Group/>
+      element: <Group />
     },
     {
       path: "/newgroup",
-      element: <Newgroup/>
+      element: <Newgroup />
     },
     {
       path: "/updategroup/:id",
-      element: <Updategroup/>
+      element: <Updategroup />
     },
-    {
-      path: "/presentacion",
-      element: <InicioGrupos/>
-    },
+    //Frases
     {
       path: "/frases",
-      element: <Frases/>
+      element: <Frases />
     },
     {
       path: "/newfrase",
-      element: <NewFrase/>
+      element: <NewFrase />
     },
     {
       path: "/updatefrase/:id",
-      element: <Updatefrase/>
+      element: <Updatefrase />
     },
+    //Categorias
     {
       path: "/category",
-      element: <Category/>
+      element: <Category />
     },
     {
       path: "/newcategory",
-      element: <NewCategory/>
+      element: <NewCategory />
     },
     {
       path: "/updatecategory/:id",
-      element: <Updatecategory/>
+      element: <Updatecategory />
     },
-    {
-      path: "/grupos",
-      element: <Grupos/>
-    },
-    {
-      path: "/grupos/:id",
-      element: <Grupoid/>
-    },
-    {
-      path: "/grupos/apex",
-      element: <Apex/>
-    },
-    {
-      path: "/grupos/cod",
-      element: <Cod/>
-    },
-    {
-      path: "/grupos/elden",
-      element: <Elden/>
-    },
-    {
-      path: "/grupos/forhonor",
-      element: <ForHonor/>
-    },
-    {
-      path: "/grupos/lol",
-      element: <Lol/>
-    },
-    {
-      path: "/grupos/minecraft",
-      element: <Minecraft/>
-    },
-    {
-      path: "/grupos/mortalkombat",
-      element: <MortalKombat/>
-    },
-    {
-      path: "/grupos/redead",
-      element: <RedeadII/>
-    },
-    {
-      path:"/API",
-      element: <API/>
-    },
-    {
-      path: "/gobierno",
-      element: <ApiGob/>
-    },
-    {
-      path: "/frase-gigapro/",
-      element: <Frase/>
-    },
-    {
-      path: "/noticias",
-      element: <Noticias/>
-    },
-    {
-      path: "/categorias",
-      element: <Categorias/>
-    },
+    //Trivia
     {
       path: "/tablatrivia",
-      element: <TablaTrivia/>
+      element: <TablaTrivia />
     },
     {
       path: "/newtrivia",
-      element: <Newtrivia/>
+      element: <Newtrivia />
     },
     {
       path: "/updatetrivia/:id",
-      element: <Updatetrivia/>
+      element: <Updatetrivia />
+    },
+    //Categorias paginas
+    {
+      path: "/categorias/Shooter",
+      element: <Shooter />
+    },
+    {
+      path: "/categorias/Moba",
+      element: <Moba />
+    },
+    {
+      path: "/categorias/Action",
+      element: <Action />
+    },
+    {
+      path: "/categorias/Construction",
+      element: <Construction />
+    },
+    {
+      path: "/categorias/Fight",
+      element: <Fight />
+    },
+    {
+      path: "/categorias/Mundo abierto",
+      element: <MundoAbierto />
+    },
+    //PAGINAS
+    {
+      path: "/presentacion",
+      element: <InicioGrupos />
+    },
+    {
+      path: "/grupos",
+      element: <Grupos />
+    },
+    {
+      path: "/grupos/:id",
+      element: <Grupoid />
+    },
+    {
+      path: "/grupos/apex",
+      element: <Apex />
+    },
+    {
+      path: "/grupos/cod",
+      element: <Cod />
+    },
+    {
+      path: "/grupos/elden",
+      element: <Elden />
+    },
+    {
+      path: "/grupos/forhonor",
+      element: <ForHonor />
+    },
+    {
+      path: "/grupos/lol",
+      element: <Lol />
+    },
+    {
+      path: "/grupos/minecraft",
+      element: <Minecraft />
+    },
+    {
+      path: "/grupos/mortalkombat",
+      element: <MortalKombat />
+    },
+    {
+      path: "/grupos/redead",
+      element: <RedeadII />
+    },
+    {
+      path: "/API",
+      element: <API />
+    },
+    {
+      path: "/gobierno",
+      element: <ApiGob />
+    },
+    {
+      path: "/frase-gigapro/",
+      element: <Frase />
+    },
+    {
+      path: "/noticias",
+      element: <Noticias />
+    },
+    {
+      path: "/categorias",
+      element: <Categorias />
     },
     {
       path: "/trivia",
-      element: <TriviaGame/>
+      element: <TriviaGame />
+    },
+    {
+      path: "/categorias/menu/:id",
+      element: <MenuGrupos />
     },
 
 
+
   ])
-  return(
+  return (
     <>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
   )
 }

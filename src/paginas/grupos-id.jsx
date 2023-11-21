@@ -1,47 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { StarIcon } from '@heroicons/react/20/solid'
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-/* const product = {
-  name: 'Apex Legends',
-  price: 'Contenido',
-  href: '#',
-  breadcrumbs: [
-    { id: 1, name: 'Regresar', href: '/grupos' },
-    { id: 2, name: 'Battle Royale', href: '#' },
-    { id: 3, name: 'Shooter', href: '#' },
-  ],
-  images: [
-    {
-      src: '/imagenes/apex1.jpg',
-      alt: 'Two each of gray, white, and black shirts laying flat.',
-    },
-    {
-      src: '/imagenes/apex2.jpg',
-      alt: 'Model wearing plain black basic tee.',
-    },
-    {
-      src: '/imagenes/apex3.jpg',
-      alt: 'Model wearing plain gray basic tee.',
-    },
-    {
-      src: '/imagenes/apex.jpg',
-      alt: 'Model wearing plain white basic tee.',
-    },
-  ],
-  description:
-    'Es un videojuego gratuito perteneciente a los géneros battle royale y hero shooter en primera persona, desarrollado por Respawn Entertainment y publicado por Electronic Arts. Fue lanzado para Microsoft Windows, PlayStation 4 y Xbox One el 4 de febrero de 2019.',
-  highlights: [
-    'Plataformas: PlayStation 5, Xbox One, Nintendo Switch, MÁS',
-    'Fecha de estreno inicial: 4 de febrero de 2019',
-    'Desarrolladores: Respawn Entertainment, Panic Button',
-    'Modo: Videojuego multijugador',
-    'Serie: Titanfall',
-    'Diseñador: Mackey McCandlish',
-    'Guionista: Mohammad Alavi',
-  ],
-} */
 const reviews = { average: 3, totalCount: 24200 }
 
 function classNames(...classes) {
@@ -93,7 +54,7 @@ const fecthGroups = async (id) => {
               </li>
             <li className="text-sm">
 
-              <a href="/404" aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
+              <a href={`/categorias/${Groups.Class}`} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
                 {Groups.Class}
               </a>
             </li>
@@ -106,7 +67,7 @@ const fecthGroups = async (id) => {
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
             <img
               src={`/imagenes/${Groups.Image1}`}
-              alt={Groups.Image}
+              alt={Groups.Image1}
               className="h-full w-full object-cover object-center"
             />
           </div>
@@ -114,14 +75,14 @@ const fecthGroups = async (id) => {
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
             <img
               src={`/imagenes/${Groups.Image2}`}
-              alt={Groups.Image}
+              alt={Groups.Image2}
               className="h-full w-full object-cover object-center"
             />
             </div>
             <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
             <img
               src={`/imagenes/${Groups.Image3}`}
-              alt={Groups.Image}
+              alt={Groups.Image3}
               className="h-full w-full object-cover object-center"
             />
             </div>
@@ -171,18 +132,31 @@ const fecthGroups = async (id) => {
               
 
               
-
+              <Link to={"/categorias/menu/"+ Groups.id}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-800 px-8 py-3 text-base font-medium text-white hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Ver grupo
+                Ver menu del grupo
+              </button>
+              </Link>
+              <button
+                type="submit"
+                className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Historia
               </button>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                Entrar al grupo
+                Personajes
+              </button>
+              <button
+                type="submit"
+                className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Logros
               </button>
             </form>
           </div>

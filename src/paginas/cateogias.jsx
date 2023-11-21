@@ -44,7 +44,7 @@ function Categorias() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href="/404">
+                    <a href={categoria.URL}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {categoria.Categoria}
                     </a>

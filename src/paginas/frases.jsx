@@ -42,7 +42,7 @@ function Frases() {
                     <div class="p-20 border-dashed">
 
                         <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div class="container">
+                            <div class="scroll-gob">
                                 <div class="relative  left-70 top-24">
                                 <Link to="/newfrase"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

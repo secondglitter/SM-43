@@ -45,21 +45,21 @@ function InicioGrupos() {
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="h-64 w-44 overflow-hidden rounded-lg rotate-in-ver">
                           <img
-                            src="/imagenes/apex.jpg"
+                            src="/imagenes/cod.jpg"
                             alt=""
                             className="h-full w-full object-cover object-center"
                           />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg rotate-in-ver">
                           <img
-                            src="/imagenes/Mortal_Kombat.jpg"
+                            src="/imagenes/Halo.jpg"
                             alt=""
                             className="h-full w-full object-cover object-center"
                           />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg rotate-in-ver">
                           <img
-                            src="/imagenes/Minecraft.jpg"
+                            src="/imagenes/hollow_knight1.jpg"
                             alt=""
                             className="h-full w-full object-cover object-center"
                           />

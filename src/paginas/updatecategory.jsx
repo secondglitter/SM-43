@@ -10,6 +10,7 @@ export default function Updatecategory() {
   const [Categorias, setCategorias] = useState({
     Categoria: "",
     Imagen: "",
+    URL: "",
   });
 
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Updatecategory() {
         setCategorias({
             Categoria: response.data.Categoria,
             Imagen: response.data.Imagen,
+            URL: response.data.URL,
         });
       } catch (error) {
         console.error("Error while loading user: ", error);
@@ -29,10 +31,11 @@ export default function Updatecategory() {
     loadCategoria();
   }, [id]);
 
-  const Editar = async (categoria, imagen) => {
+  const Editar = async (categoria, imagen, url) => {
     await axios.patch(`http://localhost:3000/categorias/${id}`, {
         Categoria: categoria,
         Imagen: imagen, 
+        URL: url, 
     });
   }
 
@@ -87,12 +90,28 @@ export default function Updatecategory() {
           </div>
         </div>
 
+        <div>
+          <label className="block text-sm font-medium leading-6 text-gray-900">
+            Redireccion
+          </label>
+          <div className="mt-2">
+            <input
+              name="URL"
+              type="text"
+              required
+              className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              onChange={handleChange}
+              value={values.URL}
+            />
+          </div>
+        </div>
+
         <div> 
         <Link to="/category">
           <button
             type='onSubmit'
             className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            onClick={() => Editar(values.Categoria, values.Imagen)}
+            onClick={() => Editar(values.Categoria, values.Imagen, values.URL)}
           >
             Actualizar
           </button>

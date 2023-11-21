@@ -18,7 +18,7 @@ function Inicio() {
 
   const [Groups, setGroups] = useState([]);
   useEffect(() => {
-    fecthGroups(1)
+    fecthGroups(8)
   }, []);
 
   const fecthGroups = async (id) => {
@@ -38,7 +38,7 @@ function Inicio() {
 
   const [Groups1, setGroups1] = useState([]);
   useEffect(() => {
-    fecthGroups1(2)
+    fecthGroups1(11)
   }, []);
 
   const fecthGroups1 = async (id1) => {
