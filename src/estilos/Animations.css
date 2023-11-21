@@ -13,10 +13,35 @@
   animation: moveBackground 15s linear infinite;
 }
 .fondo-pro-3 {
-  background: url('https://i.pinimg.com/originals/b2/87/30/b287302c69f94f0b23f192fc5ce25c6e.png'); /* Asegúrate de proporcionar la ruta completa y la extensión correcta de la imagen */
+  background: url('https://i.pinimg.com/originals/b2/87/30/b287302c69f94f0b23f192fc5ce25c6e.png');
   background-size: cover;
   background-repeat: no-repeat;
   animation: moveBackground 15s linear infinite;
+  position: relative; /* Asegúrate de que el elemento padre tenga posición relativa */
+}
+
+.fondo-pro-4 {
+  background: url('https://www.xtrafondos.com/descargar.php?id=3897&resolucion=3840x2160');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 180s linear infinite;
+  position: relative; /* Asegúrate de que el elemento padre tenga posición relativa */
+}
+
+.fondo-pro-5 {
+  background: url('https://i.pinimg.com/originals/e4/db/53/e4db53c04c47209dfeca7a2cc31d8b47.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 180s linear infinite;
+  position: relative; /* Asegúrate de que el elemento padre tenga posición relativa */
+}
+
+.fondo-pro-6 {
+  background: url('https://www.xtrafondos.com/wallpapers/galaxia-en-el-espacio-4052.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: moveBackground 240s linear infinite;
+  position: relative; /* Asegúrate de que el elemento padre tenga posición relativa */
 }
 
 @keyframes moveBackground {

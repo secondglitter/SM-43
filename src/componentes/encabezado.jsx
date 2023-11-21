@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../estilos/Menu.css';
 import '../estilos/Glitch.css';
-import Menu from './Menu';
 import PerfilDropdown from './PerfilDropdown'; // Importa el nuevo componente
 
 function Encabezado() {
@@ -18,9 +17,9 @@ function Encabezado() {
                 </Link>
               </div>
               <div className="hidden sm:ml-6 sm:block">
-                <div className=" space-x-4">
+                <div className=" space-x-10">
                   <Link to="/"><button className="glitch-button text-list-menu shining-text">Inicio</button></Link>
-                  <Link to="/dashboard"><button className="glitch-button text-list-menu shining-text">Dash</button></Link>
+                  <Link to="/estadisticas"><button className="glitch-button text-list-menu shining-text">Dash</button></Link>
                   <Link to="/conocenos"><button className="glitch-button text-list-menu shining-text">Conócenos</button></Link>
                   <Link to="/presentacion"><button className="glitch-button text-list-menu shining-text">Grupos</button></Link>
                   <Link to="/categorias"><button className="glitch-button text-list-menu shining-text">Categorias</button></Link>
@@ -28,7 +27,6 @@ function Encabezado() {
                 </div>
               </div>
             </div>
-            <Menu></Menu>
             <div className="flex items-center">
               <PerfilDropdown />
             </div>

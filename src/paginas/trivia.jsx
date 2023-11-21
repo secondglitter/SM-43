@@ -75,7 +75,7 @@ const TriviaGame = () => {
     return (
         <>
             <div className='trivia-body'>
-                <nav className='Trivia-Nav'><Header /></nav>
+            <Header />
                 <div className="trivia-container">
                     <h1>¿Qué tan gamer eres?</h1>
                     {loading && <p>Cargando preguntas...</p>}
@@ -137,7 +137,8 @@ const TriviaGame = () => {
                         </div>
                     )}
                 </div>
-                <div className='Trivia-Footer'><Footer /></div>
+                <br />
+                <Footer />
             </div>
         </>
     );

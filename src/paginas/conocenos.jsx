@@ -10,7 +10,7 @@ function Texto() {
   // 3-
   return (
     <>
-      <div className="fondo-pro-3">
+      <div className="fondo-pro-6">
         <Encabezado />
         <div className="inicio-container">
           <main className="seccion-texto">
@@ -148,7 +148,6 @@ function Texto() {
         <br />
         <br />
         <br />
-        <Redes />
           </main>
 
 

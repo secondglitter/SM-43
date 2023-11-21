@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Sidebar from "../componentes/sidebar";
 import '../estilos/tabla.css';
+import '../estilos/category.css';
+import '../estilos/Bg-stars.css';
 
 function Category() {
   const [view, setView] = useState(false)
@@ -37,7 +39,8 @@ function Category() {
   return (
     <>
     <Sidebar></Sidebar>
-    <div class="p-4 sm:ml-64">
+    <body className="estrellas bg-stars">
+    <div class="ab-category">
                 <div class="p-4 sm:ml-50">
                   
                     <div class="p-20 border-dashed">
@@ -96,6 +99,8 @@ function Category() {
                     </div>
                 </div>
             </div>
+        
+        </body>
     </>
   );
 }

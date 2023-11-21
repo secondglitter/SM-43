@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "../componentes/sidebar";
 
 function Dashboard() {
   return (
     <>
-        <Sidebar></Sidebar>
-        </>
+      <div style={{ backgroundColor: "#000 !important" }}>
+        <Sidebar />
+      </div>
+    </>
   );
 }
 

@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Sidebar from "../componentes/sidebar";
 import '../estilos/tabla.css';
+import '../estilos/group.css';
+import '../estilos/Bg-stars.css';
 
 function Group() {
   const [view, setView] = useState(false)
@@ -37,13 +39,14 @@ function Group() {
   return (
     <>
     <Sidebar></Sidebar>
-    <div class="p-4 sm:ml-64">
+    <body className="estrellas bg-stars">
+    <div class="ab-group">
                 <div class="p-4 sm:ml-50">
                   
                     <div class="p-20 border-dashed">
 
                         <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div className="scroll-gob">
+                            <div>
                                 <div class="relative  left-70 top-24">
                                 <Link to="/newgroup"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -108,6 +111,7 @@ function Group() {
                     </div>
                 </div>
             </div>
+            </body>
     </>
   );
 }

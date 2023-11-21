@@ -2,7 +2,7 @@
 import { StarIcon } from '@heroicons/react/20/solid'
 
 const product = {
-  name: 'Red Dead Redemption',
+  name: 'Red Dead Redemption 2',
   price: 'Contenido',
   href: '#',
   breadcrumbs: [

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Sidebar from "../componentes/sidebar";
+import '../estilos/frases.css';
+import '../estilos/Bg-stars.css';
 
 function Frases() {
   const [view, setView] = useState(false)
@@ -36,13 +38,14 @@ function Frases() {
   return (
     <>
     <Sidebar></Sidebar>
-    <div class="p-4 sm:ml-64">
+    <body className="estrellas">
+    <div class="ab-frases">
                 <div class="p-4 sm:ml-50">
                   
                     <div class="p-20 border-dashed">
 
                         <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div class="scroll-gob">
+                            <div class="container">
                                 <div class="relative  left-70 top-24">
                                 <Link to="/newfrase"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -95,6 +98,7 @@ function Frases() {
                     </div>
                 </div>
             </div>
+            </body>
     </>
   );
 }

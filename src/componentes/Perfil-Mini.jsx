@@ -12,7 +12,7 @@ function PERFILMIN() {
                 <div className="border" />
                 <div className="icons">
                     <div className="">
-                    <p> - #ER629DC3</p>
+                        <p> - #ER629DC3</p>
                     </div>
                     <div className="social-media">
                         <svg
@@ -43,15 +43,13 @@ function PERFILMIN() {
                 <span className="title-p">LORD LOBATO</span>
                 <div className="row row1">
                     <div className="item">
-                        <span className="big-text">201,212</span>
-                        <span className="regular-text">Amigos</span>
+                        <Link to="/404"><span className="big-text">Cerrar Sesión</span></Link>
                     </div>
                     <div className="item">
-                        <span className="big-text">234 hrs</span>
-                        <span className="regular-text">Tiempo</span>
+                        <Link to="/404"><span className="big-text">Cerrar Sesión</span></Link>
                     </div>
                     <div className="item">
-                        <Link to = "/404"><span className="regular-text">Editar perfil</span></Link>
+                        <Link to="/404"><span className="big-text">Editar perfil</span></Link>
                     </div>
                 </div>
             </div>

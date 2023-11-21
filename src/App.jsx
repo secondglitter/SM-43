@@ -22,10 +22,6 @@ import Updatefrase from './paginas/updatefrase';
 import Category from './paginas/category';
 import NewCategory from './paginas/newcategory';
 import Updatecategory from './paginas/updatecategory';
-//Trivia
-import TablaTrivia from './paginas/tabla-de-trivia';
-import Newtrivia from './paginas/newtrivia';
-import Updatetrivia from './paginas/updatetrivia';
 //Paginas
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
@@ -43,6 +39,10 @@ import Grupoid from './paginas/grupos-id';
 import Frase from './paginas/frase-gigapro';
 import Noticias from './paginas/noticias';
 import Categorias from './paginas/cateogias';
+// Trivia
+import TablaTrivia from './paginas/tabla-de-trivia';
+import Newtrivia from './paginas/newtrivia';
+import Updatetrivia from './paginas/updatetrivia';
 import TriviaGame from './paginas/trivia';
 //Categorias Paginas
 import Shooter from './categorias/shooter';
@@ -52,6 +52,8 @@ import Construction from './categorias/construction';
 import Fight from './categorias/fight';
 import MundoAbierto from './categorias/mundo_abierto';
 import MenuGrupos from './paginas/menu-grupos';
+// Estadísticas
+import Estadisticas from './paginas/Estadisticas';
 
 
 
@@ -61,80 +63,99 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Inicio />
+      element: <Inicio/>
     },
     {
       path: "/dashboard",
-      element: <Dashboard />
+      element: <Dashboard/>
+    },
+    {
+      path: "/estadisticas",
+      element: <Estadisticas/>
     },
     {
       path: "/404",
-      element: <ERROR />
+      element: <ERROR/>
     },
     {
       path: "/login",
-      element: <Login />
+      element: <Login/>
     },
     {
       path: "/registro",
-      element: <Registro />
+      element: <Registro/>
     },
     {
       path: "/conocenos",
-      element: <Texto />
+      element: <Texto/>
     },
-    //CRUD DEL DASHBOARD
-    //Usuarios
     {
       path: "/users",
-      element: <Users />
+      element: <Users/>
     },
     {
       path: "/newuser",
-      element: <Newuser />
+      element: <Newuser/>
     },
     {
       path: "/updateuser/:id",
-      element: <Updateuser />
+      element: <Updateuser/>
     },
-    //Grupos
     {
       path: "/groups",
-      element: <Group />
+      element: <Group/>
     },
     {
       path: "/newgroup",
-      element: <Newgroup />
+      element: <Newgroup/>
     },
     {
       path: "/updategroup/:id",
-      element: <Updategroup />
+      element: <Updategroup/>
     },
-    //Frases
+    {
+      path: "/presentacion",
+      element: <InicioGrupos/>
+    },
     {
       path: "/frases",
-      element: <Frases />
+      element: <Frases/>
     },
     {
       path: "/newfrase",
-      element: <NewFrase />
+      element: <NewFrase/>
     },
     {
       path: "/updatefrase/:id",
-      element: <Updatefrase />
+      element: <Updatefrase/>
     },
-    //Categorias
     {
       path: "/category",
-      element: <Category />
+      element: <Category/>
+    },
+    {
+      path: "/tablatrivia",
+      element: <TablaTrivia/>
+    },
+    {
+      path: "/newtrivia",
+      element: <Newtrivia/>
+    },
+    {
+      path: "/updatetrivia/:id",
+      element: <Updatetrivia/>
+    },
+    {
+      path: "/trivia",
+      element: <TriviaGame/>
     },
     {
       path: "/newcategory",
-      element: <NewCategory />
+      element: <NewCategory/>
     },
     {
       path: "/updatecategory/:id",
-      element: <Updatecategory />
+      element: <Updatecategory/>
     },
     //Trivia
     {
@@ -181,63 +202,63 @@ function App() {
     },
     {
       path: "/grupos",
-      element: <Grupos />
+      element: <Grupos/>
     },
     {
       path: "/grupos/:id",
-      element: <Grupoid />
+      element: <Grupoid/>
     },
     {
       path: "/grupos/apex",
-      element: <Apex />
+      element: <Apex/>
     },
     {
       path: "/grupos/cod",
-      element: <Cod />
+      element: <Cod/>
     },
     {
       path: "/grupos/elden",
-      element: <Elden />
+      element: <Elden/>
     },
     {
       path: "/grupos/forhonor",
-      element: <ForHonor />
+      element: <ForHonor/>
     },
     {
       path: "/grupos/lol",
-      element: <Lol />
+      element: <Lol/>
     },
     {
       path: "/grupos/minecraft",
-      element: <Minecraft />
+      element: <Minecraft/>
     },
     {
       path: "/grupos/mortalkombat",
-      element: <MortalKombat />
+      element: <MortalKombat/>
     },
     {
       path: "/grupos/redead",
-      element: <RedeadII />
+      element: <RedeadII/>
     },
     {
-      path: "/API",
-      element: <API />
+      path:"/API",
+      element: <API/>
     },
     {
       path: "/gobierno",
-      element: <ApiGob />
+      element: <ApiGob/>
     },
     {
       path: "/frase-gigapro/",
-      element: <Frase />
+      element: <Frase/>
     },
     {
       path: "/noticias",
-      element: <Noticias />
+      element: <Noticias/>
     },
     {
       path: "/categorias",
-      element: <Categorias />
+      element: <Categorias/>
     },
     {
       path: "/trivia",
@@ -249,11 +270,10 @@ function App() {
     },
 
 
-
   ])
-  return (
+  return(
     <>
-      <RouterProvider router={router} />
+    <RouterProvider router={router}/>
     </>
   )
 }
