@@ -37,13 +37,25 @@ import UpdateLogro from './paginas/updatelogro';
 //Paginas
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
+import Apex from './paginas/grupos/apex';
+import Cod from './paginas/grupos/cod';
+import Elden from './paginas/grupos/elden';
+import ForHonor from './paginas/grupos/forhonor';
+import Lol from './paginas/grupos/lol';
+import Minecraft from './paginas/grupos/minecraft';
+import MortalKombat from './paginas/grupos/mortalkombat';
+import RedeadII from './paginas/grupos/rd2';
 import API from './paginas/API';
 import ApiGob from './paginas/api_del_gobierno';
 import Grupoid from './paginas/grupos-id';
 import Frase from './paginas/frase-gigapro';
 import Noticias from './paginas/noticias';
+import Noticias2 from './paginas/noticias-2';
 import Categorias from './paginas/cateogias';
 // Trivia
+import TablaTrivia from './paginas/tabla-de-trivia';
+import Newtrivia from './paginas/newtrivia';
+import Updatetrivia from './paginas/updatetrivia';
 import TriviaGame from './paginas/trivia';
 //Categorias Paginas
 import Shooter from './categorias/shooter';
@@ -93,7 +105,6 @@ function App() {
       path: "/conocenos",
       element: <Texto/>
     },
-    //CRUD DE USUARIO
     {
       path: "/users",
       element: <Users/>
@@ -106,7 +117,6 @@ function App() {
       path: "/updateuser/:id",
       element: <Updateuser/>
     },
-    //CRUD DE GRUPOS
     {
       path: "/groups",
       element: <Group/>
@@ -123,7 +133,6 @@ function App() {
       path: "/presentacion",
       element: <InicioGrupos/>
     },
-    //CRUD DE FRASES
     {
       path: "/frases",
       element: <Frases/>
@@ -136,23 +145,21 @@ function App() {
       path: "/updatefrase/:id",
       element: <Updatefrase/>
     },
-    //CRUD DE CATEGORIAS
     {
       path: "/category",
       element: <Category/>
+    },
+    {
+      path: "/tablatrivia",
+      element: <TablaTrivia/>
     },
     {
       path: "/newcategory",
       element: <NewCategory/>
     },
     {
-      path: "/updatecategory/:id",
-      element: <Updatecategory/>
-    },
-    //CRUD DE HISTORIA
-    {
-      path: "/tablahistoria",
-      element: <TablaHistoria />
+      path: "/updatetrivia/:id",
+      element: <Updatetrivia/>
     },
     {
       path: "/newhistoria",
@@ -162,11 +169,11 @@ function App() {
       path: "/updatehistoria/:id",
       element: <UpdateHistoria />
     },
-    //CRUD DE PERSONAJES
     {
       path: "/tablapersonaje",
       element: <TablaPersonaje />
     },
+    //Trivia
     {
       path: "/newpersonaje",
       element: <NewPersonaje/>
@@ -175,7 +182,6 @@ function App() {
       path: "/updatepesonaje/:id",
       element: <UpdatePersonaje />
     },
-    //CRUD DE LOGROS
     {
       path: "/tablalogro",
       element: <TablaLogro />
@@ -187,6 +193,14 @@ function App() {
     {
       path: "/updatelogro/:id",
       element: <UpdateLogro />
+    },
+    {
+      path: "/updatecategory/:id",
+      element: <Updatecategory/>
+    },
+    {
+      path: "/tablahistoria",
+      element: <TablaHistoria />
     },
     //Categorias paginas
     {
@@ -227,6 +241,38 @@ function App() {
       element: <Grupoid/>
     },
     {
+      path: "/grupos/apex",
+      element: <Apex/>
+    },
+    {
+      path: "/grupos/cod",
+      element: <Cod/>
+    },
+    {
+      path: "/grupos/elden",
+      element: <Elden/>
+    },
+    {
+      path: "/grupos/forhonor",
+      element: <ForHonor/>
+    },
+    {
+      path: "/grupos/lol",
+      element: <Lol/>
+    },
+    {
+      path: "/grupos/minecraft",
+      element: <Minecraft/>
+    },
+    {
+      path: "/grupos/mortalkombat",
+      element: <MortalKombat/>
+    },
+    {
+      path: "/grupos/redead",
+      element: <RedeadII/>
+    },
+    {
       path:"/API",
       element: <API/>
     },
@@ -241,6 +287,10 @@ function App() {
     {
       path: "/noticias",
       element: <Noticias/>
+    },
+    {
+      path: "/noticias-2",
+      element: <Noticias2/>
     },
     {
       path: "/categorias",
@@ -266,7 +316,6 @@ function App() {
       path: "/grupos/logros/Apex Legends",
       element: <LogrosApex />
     },
-    
 
 
   ])

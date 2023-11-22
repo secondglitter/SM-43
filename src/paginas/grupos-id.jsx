@@ -29,9 +29,9 @@ const fecthGroups = async (id) => {
 }
 
   return (
-    
-    
-    <div className="bg-white">
+    <>
+    <body className="estrellas">
+    <div>
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -132,7 +132,7 @@ const fecthGroups = async (id) => {
               
 
               
-              <Link to={"/grupos/menu/"+ Groups.id}>
+            <Link to={"/grupos/menu/"+ Groups.id}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-800 px-8 py-3 text-base font-medium text-white hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -196,5 +196,7 @@ const fecthGroups = async (id) => {
         </div>
       </div>
     </div>
+    </body>
+    </>
   )
 }

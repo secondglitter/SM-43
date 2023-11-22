@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Formik } from "formik";
 import { useParams,Link } from "react-router-dom";
+import '../estilos/form.css';
 
 export default function Updateuser() {
   const {id} = useParams();

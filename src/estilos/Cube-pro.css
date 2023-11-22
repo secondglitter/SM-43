@@ -1,0 +1,59 @@
+.cubo div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #ffffff;    
+}
+
+.cubo .cara1 {
+    transform: translateZ(60px);
+  }
+  
+  .cubo .cara2 {
+    transform: rotateY(90deg) translateZ(60px);
+  }
+  
+  .cubo .cara3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+  }
+  
+  .cubo .cara4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+  }
+  
+  .cubo .cara5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+  }
+  
+  .cubo .cara6 {
+    transform: rotateX(-90deg) translateZ(60px);
+  }
+  
+
+#contenedor {
+    width: 120px;
+    height: 120px;
+    perspective: 6000px;
+  }
+  
+  @keyframes rotacubo {
+    0% {
+      transform: translateZ(0) rotateX(0) rotateY(0);
+    }
+    50% {
+      transform: translateZ(-800px) rotateX(180deg) rotateY(180deg);
+    }
+    100% {
+      transform: translateZ(0) rotateX(360deg) rotateY(360deg);
+    }
+  }
+  
+  .animacubo {
+    animation-name: rotacubo;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 60px 60px 0;
+  }
+  

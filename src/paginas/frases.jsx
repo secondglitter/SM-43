@@ -6,99 +6,109 @@ import '../estilos/frases.css';
 import '../estilos/Bg-stars.css';
 
 function Frases() {
-  const [view, setView] = useState(false)
-   
   const [Frases, setFrases] = useState([]);
+
   useEffect(() => {
-    fecthFrases()
+    fetchFrases();
   }, []);
 
-  const HandeDelte = async (id) => {
+  const handleDelete = async (id) => {
+    try {
+      const response = await axios.delete(`http://localhost:3001/frases/${id}`);
 
-  const response = await axios.delete(`http://localhost:3001/frases/${id}`);
-   
-   if(response.status == 200){
-     alert("Se borro correctamente")
-   } else{
-     alert("Sucedio un error")
-   }
-   fecthFrases()
-   }
+      if (response.status === 200) {
+        alert("Se borró correctamente");
+      } else {
+        alert("Sucedio un error");
+      }
 
-  const fecthFrases = async () => {
-    try{
-    const response = await axios.get('http://localhost:3001/frases')
-    setFrases(response.data)
-    console.log('Datos de la api')
-    console.log(response.data)
-    } catch(error) {
-      console.log(error)
+      fetchFrases();
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
+
+  const fetchFrases = async () => {
+    try {
+      const response = await axios.get('http://localhost:3001/frases');
+      setFrases(response.data);
+      console.log('Datos de la API');
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
-    <Sidebar></Sidebar>
-    <body className="estrellas">
-    <div class="ab-frases">
-                <div class="p-4 sm:ml-50">
-                  
-                    <div class="p-20 border-dashed">
-
-                        <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div class="container">
-                                <div class="relative  left-70 top-24">
-                                <Link to="/newfrase"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
-                                            <tr>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Frase
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Texto
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Autor
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            {Frases.map((frases) => (
-
-                                                <tr class="border-b dark:border-gray-700">
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                        {frases.id}
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        {frases.Texto}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {frases.Autor}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                      <Link to={"/updatefrase/" + frases.id}>
-                                                        <a  class="font-medium text-blue-600 dark:text-blue-500 hover:underline" >Editar</a>
-                                                      </Link>
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(frases.id)}>Eliminar</a>
-                                                    </td>
-                                                </tr>
-                                            ))}
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
+      <Sidebar></Sidebar>
+      <body className="estrellas-2">
+        <div className="ab-group">
+          <div className="p-4 sm:ml-50">
+            <div className="p-20 border-dashed">
+              <div className="flex items-center justify-center h-48 mb-4 rounded">
+                <div>
+                  <div className="relative left-70 top-24">
+                    <Link to="/newfrase">
+                      <button className="bottom-3 left-600 font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/1828/1828817.png" alt="Add Frase" />
+                      </button>
+                    </Link>
+                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 marco-brillante-3 tb-user">
+                      <thead className="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Frase
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Texto
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Autor
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Editar
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Eliminar
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {Frases.map((frase) => (
+                          <tr className="border-b dark:border-gray-700" key={frase.id}>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                              {frase.id}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              {frase.Texto}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              {frase.Autor}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              <Link to={`/updatefrase/${frase.id}`}>
+                                <a className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                  <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/10336/10336582.png" alt="Editar" />
+                                </a>
+                              </Link>
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => handleDelete(frase.id)}>
+                                <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/8258/8258337.png" alt="Eliminar" />
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
-            </body>
+          </div>
+        </div>
+      </body>
     </>
   );
 }

@@ -18,7 +18,7 @@
     width: 240px;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 2px;
-    padding: 24.7px;
+    padding: 16.9px;
     z-index: var(--i);
     transition: 0.5s;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -28,10 +28,10 @@
 
 .ul-sidebar .li-sidebar .img-sidebar {
     position: absolute;
-    left: 180px;
-    bottom: 20px;
-    width: 36px;
-    height: 36px;
+    left: 190px;
+    bottom: 14px;
+    width: 32px;
+    height: 32px;
 }
 
 .ul-sidebar .li-sidebar:hover {

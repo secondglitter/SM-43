@@ -35,6 +35,7 @@ function TablaTrivia() {
   }
   return (
     <>
+    <body className="estrellas-2">
     <Sidebar></Sidebar>
     <div class="p-4 sm:ml-64">
                 <div class="p-4 sm:ml-50">
@@ -113,6 +114,7 @@ function TablaTrivia() {
                     </div>
                 </div>
             </div>
+            </body>
     </>
   );
 }

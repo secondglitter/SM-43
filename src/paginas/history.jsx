@@ -4,105 +4,115 @@ import { Link } from "react-router-dom";
 import Sidebar from "../componentes/sidebar";
 
 function TablaHistoria() {
-  const [view, setView] = useState(false)
-   
-  const [Historia, setHistoria
-] = useState([]);
+  const [Historia, setHistoria] = useState([]);
+
   useEffect(() => {
-    fecthHistoria()
+    fetchHistoria();
   }, []);
 
-  const HandeDelte = async (id) => {
+  const handleDelete = async (id) => {
+    try {
+      const response = await axios.delete(`http://localhost:3000/historia/${id}`);
 
-  const response = await axios.delete(`http://localhost:3000/historia/${id}`);
-   
-   if(response.status == 200){
-     alert("Se borro correctamente")
-   } else{
-     alert("Sucedio un error")
-   }
-   fecthHistoria()
-   }
+      if (response.status === 200) {
+        alert("Se borró correctamente");
+      } else {
+        alert("Sucedio un error");
+      }
 
-  const fecthHistoria = async () => {
-    try{
-    const response = await axios.get('http://localhost:3000/historia')
-    setHistoria
-    (response.data)
-    console.log('Datos de la api')
-    console.log(response.data)
-    } catch(error) {
-      console.log(error)
+      fetchHistoria();
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
+
+  const fetchHistoria = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/historia');
+      setHistoria(response.data);
+      console.log('Datos de la API');
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
-    <Sidebar></Sidebar>
-    <div class="p-4 sm:ml-64">
-                <div class="p-4 sm:ml-50">
-                  
-                    <div class="p-20 border-dashed">
-
-                        <div class="flex items-center justify-center h-48 mb-4 rounded">
-                            <div class="container">
-                                <div class="relative  left-70 top-24">
-                                <Link to="/newhistoria"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
-                                            <tr>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Numero
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Nombre del juego
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Description
-                                                </th>
-                                                <th scope="col" class="px-6 py-3">
-                                                    Imagen
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            {Historia.map((historia) => (
-
-                                                <tr class="border-b dark:border-gray-700">
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                                        {historia.id}
-                                                    </th>
-                                                    <td class="px-6 py-4">
-                                                        {historia.NameGame}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {historia.Description1}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        {historia.Image}
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                      <Link to={"/updatehistoria/" + historia.id}>
-                                                        <a  class="font-medium text-blue-600 dark:text-blue-500 hover:underline" >Editar</a>
-                                                      </Link>
-                                                    </td>
-                                                    <td class="px-6 py-4">
-                                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(Historia.id)}>Eliminar</a>
-                                                    </td>
-                                                </tr>
-                                            ))}
-
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
+      <Sidebar></Sidebar>
+      <body className="estrellas-2">
+        <div className="ab-group">
+          <div className="p-4 sm:ml-50">
+            <div className="p-20 border-dashed">
+              <div className="flex items-center justify-center h-48 mb-4 rounded">
+                <div>
+                  <div className="relative left-70 top-24">
+                    <Link to="/newhistoria">
+                      <button className="bottom-3 left-600 font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/1828/1828817.png" alt="Add Historia" />
+                      </button>
+                    </Link>
+                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 marco-brillante-3 tb-user">
+                      <thead className="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Numero
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Nombre del juego
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Description
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Imagen
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Editar
+                          </th>
+                          <th scope="col" className="px-6 py-3 text-center">
+                            Eliminar
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {Historia.map((historia) => (
+                          <tr className="border-b dark:border-gray-700" key={historia.id}>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
+                              {historia.id}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              {historia.NameGame}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              {historia.Description1}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              {historia.Image}
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              <Link to={`/updatehistoria/${historia.id}`}>
+                                <a className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                  <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/10336/10336582.png" alt="Editar" />
+                                </a>
+                              </Link>
+                            </td>
+                            <td className="px-6 py-4 text-center">
+                              <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() => handleDelete(historia.id)}>
+                                <img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/8258/8258337.png" alt="Eliminar" />
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </body>
     </>
   );
 }

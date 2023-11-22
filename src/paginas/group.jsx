@@ -39,33 +39,39 @@ function Group() {
   return (
     <>
     <Sidebar></Sidebar>
-    <body className="estrellas bg-stars">
-    <div class="ab-group">
-                <div class="p-4 sm:ml-50">
+    <body className="estrellas-2">
+    <div className="ab-group">
+                <div className="p-4 sm:ml-50">
                   
-                    <div class="p-20 border-dashed">
+                    <div className="p-20 border-dashed">
 
-                        <div class="flex items-center justify-center h-48 mb-4 rounded">
+                        <div className="flex items-center justify-center h-48 mb-4 rounded">
                             <div>
-                                <div class="relative  left-70 top-24">
-                                <Link to="/newgroup"><button class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Crear</button> </Link>
-                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                        <thead class="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
+                                <div className="relative  left-70 top-24">
+                                <Link to="/newgroup"><button class=" bottom-3 left-600 font-medium text-blue-600 dark:text-blue-500 hover:underline"><img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/1828/1828817.png"/></button> </Link>
+                                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 marco-brillante-3 tb-user">
+                                        <thead className="text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-gray-400">
                                             <tr>
-                                                <th scope="col" class="px-6 py-3">
+                                                <th scope="col" className="px-6 py-3 text-center">
                                                     Grupo
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
+                                                <th scope="col" className="px-6 py-3 text-center">
                                                     Nombre del grupo
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
+                                                <th scope="col" className="px-6 py-3 text-center">
                                                     Miembros
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
+                                                <th scope="col" className="px-6 py-3 text-center">
                                                     Clasificacion
                                                 </th>
-                                                <th scope="col" class="px-6 py-3">
+                                                <th scope="col" className="px-6 py-3 text-center">
                                                     Imagen principal
+                                                </th>
+                                                <th scope="col" className="px-6 py-3 text-center">
+                                                    Editar
+                                                </th>
+                                                <th scope="col" className="px-6 py-3 text-center">
+                                                    Eliminar
                                                 </th>
                                             </tr>
                                         </thead>
@@ -73,29 +79,29 @@ function Group() {
 
                                             {Groups.map((groups) => (
 
-                                                <tr class="border-b dark:border-gray-700">
-                                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                                <tr className="border-b dark:border-gray-700">
+                                                    <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-center">
                                                         {groups.id}
-                                                    </th>
-                                                    <td class="px-6 py-4">
+                                                    </td>
+                                                    <td className="px-6 py-4 text-center">
                                                         {groups.NameGroup}
                                                     </td>
-                                                    <td class="px-6 py-4">
+                                                    <td className="px-6 py-4 text-center">
                                                         {groups.Members}
                                                     </td>
-                                                    <td class="px-6 py-4">
+                                                    <td className="px-6 py-4 text-center">
                                                         {groups.Class}
                                                     </td>
-                                                    <td class="px-6 py-4">
+                                                    <td className="px-6 py-4 text-center">
                                                         {groups.Image}
                                                     </td>
-                                                    <td class="px-6 py-4">
+                                                    <td className="px-6 py-4 text-center">
                                                       <Link to={"/updategroup/" + groups.id}>
-                                                        <a  class="font-medium text-blue-600 dark:text-blue-500 hover:underline" >Editar</a>
+                                                        <a  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/10336/10336582.png"/></a>
                                                       </Link>
                                                     </td>
-                                                    <td class="px-6 py-4">
-                                                        <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(groups.id)}>Eliminar</a>
+                                                    <td className="px-6 py-4 text-center">
+                                                        <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline" onClick={() =>  HandeDelte(groups.id)}><img className="img-dash" src="https://cdn-icons-png.flaticon.com/128/8258/8258337.png"/></a>
                                                     </td>
                                                 </tr>
                                             ))}
@@ -117,5 +123,3 @@ function Group() {
 }
 
 export default Group;
-
-

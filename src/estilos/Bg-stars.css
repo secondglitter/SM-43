@@ -37,6 +37,20 @@
   }
   
   .estrellas {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb_g8J7zQ1NSrzDIvootgPmtS9ivyjNQcAK1vhkReSLqVfyVYx-2v_Z4f5IV9LvFXGToZauTFFTYCXb5nLSVPAKZkG6ox8slt6hPqK0f6xck9jjnZa1vPSYCWLOf272Ezj7SmMgA5PTWQ/s1600/twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twink-back 140s linear infinite;
+  }
+
+  .estrellas-2 {
     position: absolute;
     top: 0;
     left: 0;

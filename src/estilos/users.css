@@ -3,4 +3,38 @@
     position: absolute;
 }
 
+.scroll-table-user {
+    max-height: 310px;
+    /* Ajusta la altura máxima según tus necesidades */
+    max-width: 20px;
+    overflow-y: scroll;
+  }
 
+.img-dash {
+    width: 40px;
+    height: 40px;
+}
+
+.tb-user {
+    background-color: rgba(114, 114, 114, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.tb-user th {
+    font-size: 12px;
+    font-family: 'Oswald', Arial;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+
+  .tb-user td {
+    font-size: 12px;
+    font-family: Serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
+    border-bottom: 1px solid #fff;
+  }

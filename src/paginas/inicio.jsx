@@ -117,165 +117,153 @@ function Inicio() {
   // 3-
   return (
     <>
-      <Header></Header>
-      <div className="inicio-container fondo-pro-3">
+      <body className="fondo-pro-4">
+        <Header></Header>
+        <div className="inicio-container">
 
-        <div className="bienvenida">
-          <br />
-          <div className="title-2"><span>MONKEYS GAMES</span></div>
+          <div className="bienvenida">
+            <br />
+            <div className="title-2"><span>MONKEYS GAMES</span></div>
 
-        </div>
-        <br />
-        <br />
-        <div className="contenido">
-          <div className="seccion" style={{ padding: '3px', width: '100%', height: '100px' }}>
-            <span className="title-3">-Frase del día-</span>
-            <br></br>
-            <span className="title-3">{frases.Texto}</span>
-            <span className="title-3">{frases.Autor}</span>
-            <div className="card-container-1">
-              <div className="card-1">
-                <div className="main-content">
-                  <div className="header">
-                    <span>Articulo emitido el</span>
-                    <span>7-Nov-2023</span>
-                  </div>
-                  <p className="heading">Conoce sobre Monkeys Games</p>
-                  <br />
-                  <div className="categories">
-                    <span>Sociales</span>
-                    <span>Comunidad</span>
-                  </div>
-                </div>
-                <div className="by">
-                  - by LL
-                </div>
-              </div>
-            </div>
-
-            <div className="card-container-2">
-              <div className="card-1">
-                <div className="main-content">
-                  <div className="header">
-                    <span>Articulo emitido el</span>
-                    <span>7-Nov-2023</span>
-                  </div>
-                  <p className="heading">Conoce nuestros grupos</p>
-                  <br />
-                  <div className="categories">
-                    <span>Sociales</span>
-                    <span>Comunidad</span>
-                  </div>
-                </div>
-                <div className="by">
-                  - by LL
-                </div>
-              </div>
-            </div>
-
-            <div className="card-container-3">
-              <div className="card-1">
-                <div className="main-content">
-                  <div className="header">
-                    <span>Articulo emitido el</span>
-                    <span>7-Nov-2023</span>
-                  </div>
-                  <p className="heading">Adentrate en las noticias de tus juegos favoritos </p>
-                  <br />
-                  <div className="categories">
-                    <span>Videojuegos</span>
-                    <span>Amigos</span>
-                  </div>
-                </div>
-                <div className="by">
-                  - by LL
-                </div>
-              </div>
-            </div>
-
-            <div className="card-art">
-              <div className="content-art">
-                <p className="heading-art">¿Y si jugamos un rato?</p>
-                <p className="para-art">
-                  En mokeys games puedes pasar unos ratos de diversión con tus amigos y si
-                  no tienes amigos pues puedes hacer algunos...
-                </p>
-                <Link to="/trivia">
-                <button  className="btn-art">VAMOS JUGAR</button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="myCard-1">
-              <div className="innerCard">
-                <div className="frontSide">
-                  <p className="title2">BEST GAME</p>
-                  <p>Descubre el juego más popular</p>
-                  <p className="title2">☝🏼</p>
-                </div>
-                <div className="backSide">
-                  <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="myCard-2">
-              <div className="innerCard">
-                <div className="frontSide">
-                  <p className="title2">NEW GAME</p>
-                  <p>Descubre el juego más reciente</p>
-                  <p className="title2">☝🏼</p>
-                </div>
-                <div className="backSide">
-                  <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="myCard-3">
-              <div className="innerCard">
-                <div className="frontSide">
-                  <p className="title2">BEST GROUP</p>
-                  <p>Descubre el grupo más popular</p>
-                  <p className="title2">☝🏼</p>
-                </div>
-                <div className="backSide">
-                  <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div className="inicio-container-cube">
-            <div className="cube-card">
-              <div className="cube">
-                <div className="face front">
-                  <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
-                </div>
-                <div className="face back">
-                  <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
-                </div>
-                <div className="face left">
-                  <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
-                </div>
-                <div className="face right">
-                  <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="/imagenes/robot.png" />
           </div>
           <br />
+          <br />
+          <div className="contenido">
+            <div className="seccion" style={{ padding: '3px', width: '100%', height: '100px' }}>
+              <span className="title-3">-Frase del día-</span>
+              <br></br>
+              <span className="title-3">{frases.Texto}</span>
+              <span className="title-3">{frases.Autor}</span>
+              <div className="card-container-1">
+                <div className="card-1">
+                  <div className="main-content">
+                    <div className="header">
+                    </div>
+                    <p className="heading">¿QUIERES DIVERTIRTE UN RATO Y DESESTRESARTE? JUEGA LEAGUE OF LEGENDS</p>
+                    <br />
+                    <Link to="https://www.leagueoflegends.com/es-mx/"><button class="learn-more"> JUGAR AHORA
+                    </button></Link>
+                  </div>
+                  <div className="by">
+                    - by LL
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-container-2">
+                <div className="card-1">
+                  <div className="main-content">
+                    <div className="header">
+                    </div>
+                    <p className="heading">Conoce nuestras categorias de videojuegos y encuentra tu favorita</p>
+                    <br />
+                    <Link to="/categorias"><button class="learn-more"> Conocer Ahora
+                    </button></Link>
+                  </div>
+                  <div className="by">
+                    - by LL
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-container-3">
+                <div className="card-1">
+                  <div className="main-content">
+                    <div className="header">
+                    </div>
+                    <p className="heading">Adentrate en las noticias de tus juegos favoritos y enterate de todo lo nuevo</p>
+                    <br />
+                    <Link to="/noticias-2"><button class="learn-more"> Ver mas
+                    </button></Link>
+                  </div>
+                  <div className="by">
+                    - by LL
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-art">
+                <div className="content-art">
+                  <p className="heading-art">¿Eres un Gamer real?</p>
+                  <p className="para-art">
+                    Tomate un descanso y comprueba cual es tu conocimiento
+                    general sobre los videojuegos que ha existido a lo largo de la historia.
+                  </p>
+                  <Link to="/trivia">
+                    <button className="btn-art">VAMOS JUGAR</button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="myCard-1">
+                <div className="innerCard">
+                  <div className="frontSide">
+                    <p className="title2">BEST GAME</p>
+                    <p>Descubre el juego más popular</p>
+                    <p className="title2">☝🏼</p>
+                  </div>
+                  <div className="backSide">
+                    <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="myCard-2">
+                <div className="innerCard">
+                  <div className="frontSide">
+                    <p className="title2">NEW GAME</p>
+                    <p>Descubre el juego más reciente</p>
+                    <p className="title2">☝🏼</p>
+                  </div>
+                  <div className="backSide">
+                    <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="myCard-3">
+                <div className="innerCard">
+                  <div className="frontSide">
+                    <p className="title2">BEST GROUP</p>
+                    <p>Descubre el grupo más popular</p>
+                    <p className="title2">☝🏼</p>
+                  </div>
+                  <div className="backSide">
+                    <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div className="inicio-container-cube">
+              <div className="cube-card">
+                <div className="cube">
+                  <div className="face front">
+                    <Link to={"/grupos/" + Groups2.id}><img src={`/imagenes/${Groups2.Image}`} /></Link>
+                  </div>
+                  <div className="face back">
+                    <Link to={"/grupos/" + Groups.id}><img src={`/imagenes/${Groups.Image}`} /></Link>
+                  </div>
+                  <div className="face left">
+                    <Link to={"/grupos/" + Groups1.id}><img src={`/imagenes/${Groups1.Image}`} /></Link>
+                  </div>
+                  <div className="face right">
+                    <Link to={"/grupos/" + Groups3.id}><img src={`/imagenes/${Groups3.Image}`} /></Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="/imagenes/robot.png" />
+            </div>
+            <br />
+          </div>
+          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br />
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br />
-      </div>
-
-
-      <Footer></Footer>
+        <Footer></Footer>
+      </body>
     </>
   );
 }

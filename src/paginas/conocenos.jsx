@@ -59,6 +59,7 @@ function Texto() {
             <div className="tracker tr-25" />
             <div id="card-m">
               <p id="prompt">MISIÓN</p>
+              <img id="prompt" src="https://cdn-icons-png.flaticon.com/128/4406/4406394.png" alt="Imagen" style={{ paddingBottom: '80px', marginLeft: '20px' }} />
               <div className="title">
                 Potenciar la diversión <br />y la comunidad en el <br />
                 mundo de los <br />
@@ -97,6 +98,7 @@ function Texto() {
             <div className="tracker tr-25" />
             <div id="card-m">
               <p id="prompt">VISIÓN</p>
+              <img id="prompt" src="https://cdn-icons-png.flaticon.com/128/1934/1934044.png" alt="Imagen" style={{ paddingBottom: '80px', marginLeft: '20px' }} />
               <div className="title">
               Ser la plataforma líder en la construcción <br />de comunidades de videojuegos, <br />
                 conectando jugadores <br /> de todo el mundo.
@@ -134,6 +136,7 @@ function Texto() {
             <div className="tracker tr-25" />
             <div id="card-m">
               <p id="prompt">OBJETIVO</p>
+              <img id="prompt" src="https://cdn-icons-png.flaticon.com/128/584/584721.png" alt="Imagen" style={{ paddingBottom: '80px', marginLeft: '20px' }} />
               <div className="title">
               Facilitar la interacción y el entretenimiento <br />de los gamers, promoviendo un <br />
               ambiente inclusivo y divertido. <br />
