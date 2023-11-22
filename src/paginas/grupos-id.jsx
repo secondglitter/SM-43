@@ -132,7 +132,7 @@ const fecthGroups = async (id) => {
               
 
               
-              <Link to={"/categorias/menu/"+ Groups.id}>
+              <Link to={"/grupos/menu/"+ Groups.id}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-800 px-8 py-3 text-base font-medium text-white hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -140,24 +140,30 @@ const fecthGroups = async (id) => {
                 Ver menu del grupo
               </button>
               </Link>
+              <Link to={"/grupos/historia/" + Groups.id}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Historia
               </button>
+              </Link>
+              <Link to={"/grupos/personajes/" + Groups.NameGroup}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Personajes
               </button>
+              </Link>
+              <Link to={"/grupos/logros/" + Groups.NameGroup}>
               <button
                 type="submit"
                 className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-green-500 px-8 py-3 text-base font-medium text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 Logros
               </button>
+              </Link>
             </form>
           </div>
 

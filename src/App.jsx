@@ -22,17 +22,21 @@ import Updatefrase from './paginas/updatefrase';
 import Category from './paginas/category';
 import NewCategory from './paginas/newcategory';
 import Updatecategory from './paginas/updatecategory';
+//Historia
+import TablaHistoria from './paginas/history';
+import Newhistoria from './paginas/newhistory';
+import UpdateHistoria from './paginas/updatehistory';
+//Personajes
+import TablaPersonaje from './paginas/tabla-personajes';
+import NewPersonaje from './paginas/newpersonaje';
+import UpdatePersonaje from './paginas/updatepersonaje';
+//Logros
+import TablaLogro from './paginas/tabla-logros';
+import NewLogro from './paginas/newlogro';
+import UpdateLogro from './paginas/updatelogro';
 //Paginas
 import InicioGrupos from './paginas/inicio-grupos';
 import Grupos from './paginas/grupos';
-import Apex from './paginas/grupos/apex';
-import Cod from './paginas/grupos/cod';
-import Elden from './paginas/grupos/elden';
-import ForHonor from './paginas/grupos/forhonor';
-import Lol from './paginas/grupos/lol';
-import Minecraft from './paginas/grupos/minecraft';
-import MortalKombat from './paginas/grupos/mortalkombat';
-import RedeadII from './paginas/grupos/rd2';
 import API from './paginas/API';
 import ApiGob from './paginas/api_del_gobierno';
 import Grupoid from './paginas/grupos-id';
@@ -40,9 +44,6 @@ import Frase from './paginas/frase-gigapro';
 import Noticias from './paginas/noticias';
 import Categorias from './paginas/cateogias';
 // Trivia
-import TablaTrivia from './paginas/tabla-de-trivia';
-import Newtrivia from './paginas/newtrivia';
-import Updatetrivia from './paginas/updatetrivia';
 import TriviaGame from './paginas/trivia';
 //Categorias Paginas
 import Shooter from './categorias/shooter';
@@ -54,6 +55,9 @@ import MundoAbierto from './categorias/mundo_abierto';
 import MenuGrupos from './paginas/menu-grupos';
 // Estadísticas
 import Estadisticas from './paginas/Estadisticas';
+import Historia from './paginas/historia';
+import PersonajesApex from './personajes/PersonajesApex';
+import LogrosApex from './logros/logrosapex';
 
 
 
@@ -89,6 +93,7 @@ function App() {
       path: "/conocenos",
       element: <Texto/>
     },
+    //CRUD DE USUARIO
     {
       path: "/users",
       element: <Users/>
@@ -101,6 +106,7 @@ function App() {
       path: "/updateuser/:id",
       element: <Updateuser/>
     },
+    //CRUD DE GRUPOS
     {
       path: "/groups",
       element: <Group/>
@@ -117,6 +123,7 @@ function App() {
       path: "/presentacion",
       element: <InicioGrupos/>
     },
+    //CRUD DE FRASES
     {
       path: "/frases",
       element: <Frases/>
@@ -129,25 +136,10 @@ function App() {
       path: "/updatefrase/:id",
       element: <Updatefrase/>
     },
+    //CRUD DE CATEGORIAS
     {
       path: "/category",
       element: <Category/>
-    },
-    {
-      path: "/tablatrivia",
-      element: <TablaTrivia/>
-    },
-    {
-      path: "/newtrivia",
-      element: <Newtrivia/>
-    },
-    {
-      path: "/updatetrivia/:id",
-      element: <Updatetrivia/>
-    },
-    {
-      path: "/trivia",
-      element: <TriviaGame/>
     },
     {
       path: "/newcategory",
@@ -157,18 +149,44 @@ function App() {
       path: "/updatecategory/:id",
       element: <Updatecategory/>
     },
-    //Trivia
+    //CRUD DE HISTORIA
     {
-      path: "/tablatrivia",
-      element: <TablaTrivia />
+      path: "/tablahistoria",
+      element: <TablaHistoria />
     },
     {
-      path: "/newtrivia",
-      element: <Newtrivia />
+      path: "/newhistoria",
+      element: <Newhistoria />
     },
     {
-      path: "/updatetrivia/:id",
-      element: <Updatetrivia />
+      path: "/updatehistoria/:id",
+      element: <UpdateHistoria />
+    },
+    //CRUD DE PERSONAJES
+    {
+      path: "/tablapersonaje",
+      element: <TablaPersonaje />
+    },
+    {
+      path: "/newpersonaje",
+      element: <NewPersonaje/>
+    },
+    {
+      path: "/updatepesonaje/:id",
+      element: <UpdatePersonaje />
+    },
+    //CRUD DE LOGROS
+    {
+      path: "/tablalogro",
+      element: <TablaLogro />
+    },
+    {
+      path: "/newlogro",
+      element: <NewLogro/>
+    },
+    {
+      path: "/updatelogro/:id",
+      element: <UpdateLogro />
     },
     //Categorias paginas
     {
@@ -209,38 +227,6 @@ function App() {
       element: <Grupoid/>
     },
     {
-      path: "/grupos/apex",
-      element: <Apex/>
-    },
-    {
-      path: "/grupos/cod",
-      element: <Cod/>
-    },
-    {
-      path: "/grupos/elden",
-      element: <Elden/>
-    },
-    {
-      path: "/grupos/forhonor",
-      element: <ForHonor/>
-    },
-    {
-      path: "/grupos/lol",
-      element: <Lol/>
-    },
-    {
-      path: "/grupos/minecraft",
-      element: <Minecraft/>
-    },
-    {
-      path: "/grupos/mortalkombat",
-      element: <MortalKombat/>
-    },
-    {
-      path: "/grupos/redead",
-      element: <RedeadII/>
-    },
-    {
       path:"/API",
       element: <API/>
     },
@@ -265,9 +251,22 @@ function App() {
       element: <TriviaGame />
     },
     {
-      path: "/categorias/menu/:id",
+      path: "/grupos/menu/:id",
       element: <MenuGrupos />
     },
+    {
+      path: "/grupos/historia/:id",
+      element: <Historia />
+    },
+    {
+      path: "/grupos/personajes/Apex Legends",
+      element: <PersonajesApex />
+    },
+    {
+      path: "/grupos/logros/Apex Legends",
+      element: <LogrosApex />
+    },
+    
 
 
   ])

@@ -45,7 +45,9 @@ function Sidebar() {
           <Link to="/groups"><li className="li-sidebar" style={{ '--i': 4 }}><a className="a-sidebar" >Grupos</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/11507/11507818.png"/></li></Link>
           <Link to="/category"><li className="li-sidebar" style={{ '--i': 3 }}><a className="a-sidebar" >Categorias</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/3405/3405802.png"/></li></Link>
           <Link to="/frases"><li className="li-sidebar" style={{ '--i': 1 }}><a className="a-sidebar" >Frases</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/4928/4928929.png"/></li></Link>
-          <Link to="/tablatrivia"><li className="li-sidebar" style={{ '--i': 2 }}><a className="a-sidebar" >Trivias</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/6066/6066105.png"/></li></Link>
+          <Link to="/tablahistoria"><li className="li-sidebar" style={{ '--i': 2 }}><a className="a-sidebar" >Historia</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/6066/6066105.png"/></li></Link>
+          <Link to="/tablapersonaje"><li className="li-sidebar" style={{ '--i': 2 }}><a className="a-sidebar" >Personajes</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/3128/3128528.png"/></li></Link>
+          <Link to="/tablalogro"><li className="li-sidebar" style={{ '--i': 2 }}><a className="a-sidebar" >Logros</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/3288/3288919.png"/></li></Link>
           <Link to="/404"><li className="li-sidebar" style={{ '--i': 0}}><a className="a-sidebar" >Salir</a><img className="img-sidebar" src="https://cdn-icons-png.flaticon.com/128/320/320140.png"/></li></Link>
           </ul>
         </div>
